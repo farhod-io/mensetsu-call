@@ -1,12 +1,12 @@
 {
-  "id": "mensetsu-call-pwa",
+  "id": "/",
   "name": "CAL Yapon HR Intervyusi — Mensetsu Call",
   "short_name": "Mensetsu Call",
   "description": "株式会社CAL va Yaponiya IT SES/Dasturchi HR suhbatlariga tayyorlanish platformasi",
-  "start_url": "./",
-  "scope": "./",
+  "start_url": "/",
+  "scope": "/",
   "display": "standalone",
-  "display_override": ["window-controls-overlay", "standalone", "minimal-ui"],
+  "display_override": ["standalone", "minimal-ui"],
   "background_color": "#0d1117",
   "theme_color": "#0d1117",
   "orientation": "any",
@@ -15,31 +15,31 @@
   "categories": ["education", "productivity", "utilities"],
   "icons": [
     {
-      "src": "icons/icon-192.png",
+      "src": "/icons/icon-192.png",
       "sizes": "192x192",
       "type": "image/png",
       "purpose": "any"
     },
     {
-      "src": "icons/icon-maskable-192.png",
+      "src": "/icons/icon-maskable-192.png",
       "sizes": "192x192",
       "type": "image/png",
       "purpose": "maskable"
     },
     {
-      "src": "icons/icon-512.png",
+      "src": "/icons/icon-512.png",
       "sizes": "512x512",
       "type": "image/png",
       "purpose": "any"
     },
     {
-      "src": "icons/icon-maskable-512.png",
+      "src": "/icons/icon-maskable-512.png",
       "sizes": "512x512",
       "type": "image/png",
       "purpose": "maskable"
     },
     {
-      "src": "icons/icon.svg",
+      "src": "/icons/icon.svg",
       "sizes": "any",
       "type": "image/svg+xml",
       "purpose": "any"
@@ -50,22 +50,22 @@
       "name": "Suhbat Trenajyori",
       "short_name": "Trenajyor",
       "description": "60 soniyalik interaktiv suhbat trenajyori",
-      "url": "./#simulatorSection",
-      "icons": [{ "src": "icons/icon-192.png", "sizes": "192x192" }]
+      "url": "/#simulatorSection",
+      "icons": [{ "src": "/icons/icon-192.png", "sizes": "192x192" }]
     },
     {
       "name": "N1/N2/N3 Lug'at",
       "short_name": "Lug'at",
       "description": "130+ atamalar va Kaiwa lug'ati",
-      "url": "./#vocabSection",
-      "icons": [{ "src": "icons/icon-192.png", "sizes": "192x192" }]
+      "url": "/#vocabSection",
+      "icons": [{ "src": "/icons/icon-192.png", "sizes": "192x192" }]
     },
     {
       "name": "15 Daqiqalik Eslatma",
       "short_name": "Cheat Sheet",
       "description": "Suhbatdan 15 daqiqa oldingi eslatmalar",
-      "url": "./#cheatSheetModal",
-      "icons": [{ "src": "icons/icon-192.png", "sizes": "192x192" }]
+      "url": "/#cheatSheetModal",
+      "icons": [{ "src": "/icons/icon-192.png", "sizes": "192x192" }]
     }
   ]
 }

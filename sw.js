@@ -1,30 +1,37 @@
-const CACHE_NAME = 'mensetsu-call-v1';
+const CACHE_NAME = 'mensetsu-call-v2';
 
 const STATIC_ASSETS = [
-  './',
-  './index.html',
-  './manifest.json',
-  './favicon.ico',
-  './icons/icon-192.png',
-  './icons/icon-512.png',
-  './icons/icon-maskable-192.png',
-  './icons/icon-maskable-512.png',
-  './icons/apple-touch-icon.png',
-  './icons/favicon-32x32.png',
-  './icons/favicon-16x16.png',
-  './icons/icon.svg'
+  '/',
+  '/index.html',
+  '/manifest.json',
+  '/favicon.ico',
+  '/icons/icon-192.png',
+  '/icons/icon-512.png',
+  '/icons/icon-maskable-192.png',
+  '/icons/icon-maskable-512.png',
+  '/icons/apple-touch-icon.png',
+  '/icons/favicon-32x32.png',
+  '/icons/favicon-16x16.png',
+  '/icons/icon.svg'
 ];
 
-// Install: Cache core offline shell
+// Install: Cache core offline shell safely
 self.addEventListener('install', (event) => {
   event.waitUntil(
     caches.open(CACHE_NAME).then((cache) => {
-      return cache.addAll(STATIC_ASSETS);
+      return cache.addAll(STATIC_ASSETS).catch((err) => {
+        console.warn('addAll failed, falling back to individual caching:', err);
+        return Promise.all(
+          STATIC_ASSETS.map((asset) =>
+            cache.add(asset).catch((e) => console.warn('Could not cache asset:', asset, e))
+          )
+        );
+      });
     }).then(() => self.skipWaiting())
   );
 });
 
-// Activate: Clean up old caches
+// Activate: Clean up old caches & take control immediately
 self.addEventListener('activate', (event) => {
   event.waitUntil(
     caches.keys().then((keys) => {
@@ -61,26 +68,27 @@ self.addEventListener('fetch', (event) => {
           return networkRes;
         })
         .catch(() => {
-          return caches.match('./index.html').then((cached) => {
-            return cached || caches.match('./');
+          return caches.match('/index.html').then((cached) => {
+            return cached || caches.match('/') || caches.match('./index.html');
           });
         })
     );
     return;
   }
 
-  // 2. Google Fonts & Static CDN assets: Stale-While-Revalidate or Cache-First
+  // 2. Google Fonts & Static CDN assets: Stale-While-Revalidate
   if (url.origin.includes('fonts.googleapis.com') || url.origin.includes('fonts.gstatic.com')) {
     event.respondWith(
       caches.match(req).then((cached) => {
-        if (cached) return cached;
-        return fetch(req).then((networkRes) => {
+        const fetchPromise = fetch(req).then((networkRes) => {
           if (networkRes && networkRes.status === 200) {
             const resClone = networkRes.clone();
             caches.open(CACHE_NAME).then((cache) => cache.put(req, resClone));
           }
           return networkRes;
-        });
+        }).catch(() => null);
+
+        return cached || fetchPromise;
       })
     );
     return;
@@ -99,7 +107,6 @@ self.addEventListener('fetch', (event) => {
         }
         return networkRes;
       }).catch((err) => {
-        // Return fallback or let it fail gracefully
         return null;
       });
     })
