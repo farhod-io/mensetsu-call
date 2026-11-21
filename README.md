@@ -12,6 +12,7 @@
 - **💻 IT Texnik Savol-Javoblar:** N+1 muammosi, REST vs GraphQL, React, Xavfsizlik va Git.
 - **📹 Web-Suhbat Odobi:** Onlayn suhbat oldidan 8 ta muhim checklist.
 - **📋 HR Baholash Varakasi:** Rekruter baholash mezonlari (25%, 25%, 20%, 15%, 15%).
+- **📱 PWA (Progressive Web App):** 100% oflayn ishlash, mobil (iOS/Android) hamda kompyuterga ilova sifatida o'rnatish imkoniyati.
 
 ## 🌐 Jonli Sayt
 [https://callco-iota.vercel.app](https://callco-iota.vercel.app)

@@ -4,6 +4,23 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>CAL Yapon HR Intervyusi — Savol-Javoblar & N1/N2/N3 Lug'at</title>
+
+  <!-- PWA & Mobile Meta Tags -->
+  <meta name="theme-color" content="#0d1117">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="Mensetsu">
+  <meta name="application-name" content="Mensetsu Call">
+  <meta name="description" content="株式会社CAL (CAL Co., Ltd.) va Yaponiya IT SES/Dasturchi HR suhbatlariga tayyorlanish platformasi">
+
+  <!-- PWA Manifest & Favicons -->
+  <link rel="manifest" href="manifest.json">
+  <link rel="icon" type="image/svg+xml" href="icons/icon.svg">
+  <link rel="icon" type="image/png" sizes="32x32" href="icons/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="icons/favicon-16x16.png">
+  <link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
+  <link rel="shortcut icon" href="favicon.ico">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Noto+Sans+JP:wght@400;500;700&family=Fira+Code:wght@400;600&display=swap" rel="stylesheet">
@@ -1692,6 +1709,7 @@
         <button class="btn-toggle" id="btnLangUz" onclick="setLangView('uz')">🇺🇿 O'zbekcha</button>
         <button class="btn-toggle" id="btnCheatSheet" onclick="toggleCheatSheet()" style="background: linear-gradient(135deg, #f59e0b, #d97706); color: #fff; font-weight: 700; border: none; box-shadow: 0 2px 8px rgba(245, 158, 11, 0.4);">⚡ Suhbatdan 15 Daqiqa Oldin</button>
         <button class="btn-toggle" id="btnRecall" onclick="toggleRecallMode()">🧠 Yodlash rejimi</button>
+        <button class="btn-toggle" id="btnPwaInstall" onclick="promptPWAInstall()" style="display: none; background: linear-gradient(135deg, #238636, #2ea043); color: #fff; font-weight: 700; border: none; box-shadow: 0 2px 8px rgba(46, 160, 67, 0.4);">📲 O'rnatish (PWA)</button>
       </div>
     </div>
   </div>
@@ -10087,6 +10105,74 @@ Ha, albatta 3 ta savolim bor edi:
         modal.classList.toggle('hidden');
       }
     }
+
+    // ==========================================
+    // PWA & Service Worker Registration
+    // ==========================================
+    let deferredPrompt = null;
+
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', () => {
+        navigator.serviceWorker.register('./sw.js')
+          .then((reg) => {
+            console.log('PWA Service Worker registered:', reg.scope);
+            reg.onupdatefound = () => {
+              const installingWorker = reg.installing;
+              if (installingWorker) {
+                installingWorker.onstatechange = () => {
+                  if (installingWorker.state === 'installed' && navigator.serviceWorker.controller) {
+                    showToast("🔄 Yangi versiya yuklandi! Sahifani yangilang.");
+                  }
+                };
+              }
+            };
+          })
+          .catch((err) => {
+            console.error('Service Worker registration failed:', err);
+          });
+      });
+    }
+
+    // PWA Install Prompt handling
+    window.addEventListener('beforeinstallprompt', (e) => {
+      e.preventDefault();
+      deferredPrompt = e;
+      const installBtn = document.getElementById('btnPwaInstall');
+      if (installBtn) {
+        installBtn.style.display = 'inline-flex';
+      }
+    });
+
+    window.addEventListener('appinstalled', () => {
+      deferredPrompt = null;
+      const installBtn = document.getElementById('btnPwaInstall');
+      if (installBtn) installBtn.style.display = 'none';
+      showToast("🎉 Ilova muvaffaqiyatli o'rnatildi!");
+    });
+
+    function promptPWAInstall() {
+      if (!deferredPrompt) {
+        showToast("Ilovani brauzer menyusi orqali o'rnatishingiz mumkin (Ulashish -> Ekranga qo'shish)");
+        return;
+      }
+      deferredPrompt.prompt();
+      deferredPrompt.userChoice.then((choiceResult) => {
+        if (choiceResult.outcome === 'accepted') {
+          showToast("Ilova o'rnatilmoqda...");
+        }
+        deferredPrompt = null;
+        const installBtn = document.getElementById('btnPwaInstall');
+        if (installBtn) installBtn.style.display = 'none';
+      });
+    }
+
+    // Network status listener
+    window.addEventListener('online', () => {
+      showToast("🌐 Internet aloqasi tiklandi (Onlayn)");
+    });
+    window.addEventListener('offline', () => {
+      showToast("⚠️ Oflayn rejim — Ma'lumotlar keshdan ishlaydi");
+    });
 
   </script>
 

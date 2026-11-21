@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0d1117" />
+      <stop offset="100%" stop-color="#161b22" />
+    </linearGradient>
+    <linearGradient id="borderGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#58a6ff" />
+      <stop offset="100%" stop-color="#388bfd" stop-opacity="0.3" />
+    </linearGradient>
+    <linearGradient id="badgeGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#388bfd" stop-opacity="0.3" />
+      <stop offset="100%" stop-color="#1f6feb" stop-opacity="0.1" />
+    </linearGradient>
+  </defs>
+
+  <!-- Background Squircle -->
+  <rect x="16" y="16" width="480" height="480" rx="110" fill="url(#bgGrad)" stroke="url(#borderGrad)" stroke-width="6" />
+
+  <!-- Inner Card -->
+  <rect x="48" y="48" width="416" height="416" rx="80" fill="#161b22" stroke="#388bfd" stroke-width="2" stroke-opacity="0.5" />
+
+  <!-- CAL Pill Badge -->
+  <rect x="196" y="80" width="120" height="42" rx="21" fill="url(#badgeGrad)" stroke="#58a6ff" stroke-width="2" />
+  <text x="256" y="108" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="22" font-weight="800" fill="#58a6ff" text-anchor="middle" letter-spacing="2">CAL</text>
+
+  <!-- Central Kanji: 面 (Mensetsu) -->
+  <text x="256" y="320" font-family="'Hiragino Sans', 'Hiragino Kaku Gothic ProN', 'Noto Sans JP', sans-serif" font-size="180" font-weight="bold" fill="#f0f6fc" text-anchor="middle">面</text>
+
+  <!-- Subtitle -->
+  <text x="256" y="385" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="24" font-weight="700" fill="#8b949e" text-anchor="middle" letter-spacing="4">MENSETSU</text>
+</svg>
