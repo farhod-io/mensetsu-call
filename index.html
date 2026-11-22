@@ -10081,7 +10081,7 @@ Ha, albatta 3 ta savolim bor edi:
 
     document.getElementById('searchInput').addEventListener('input', function(e) {
       const q = e.target.value.toLowerCase().trim();
-      const cards = document.querySelectorAll('.q-card, .project-card, .vocab-card, .grammar-card, .speech-card, #vocabTableBody tr');
+      const cards = document.querySelectorAll('.q-card, .project-card, .vocab-card, .kaiwa-card, .grammar-card, .speech-card, #vocabTableBody tr');
 
       cards.forEach(card => {
         const text = card.innerText.toLowerCase();

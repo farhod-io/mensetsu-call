@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>CAL Yapon IT Suhbat — 35 Yangi So'zlar & Intervyu Grammatikasi</title>
+  <title>CAL Yapon IT Suhbat — 114 Ta Yangi Lug'at & Intervyu Grammatikasi</title>
 
   <!-- PWA & Mobile Meta Tags -->
   <meta name="theme-color" content="#0d1117">
@@ -832,6 +832,52 @@
       opacity: 1;
       transform: translateY(0);
     }
+
+    .badge-tag {
+      font-size: 11px;
+      font-weight: 700;
+      padding: 2px 8px;
+      border-radius: 6px;
+      display: inline-block;
+    }
+    .badge-ses {
+      background: rgba(88, 166, 255, 0.15);
+      color: #58a6ff;
+      border: 1px solid rgba(88, 166, 255, 0.3);
+    }
+    .badge-kaiwa {
+      background: rgba(188, 140, 255, 0.15);
+      color: #bc8cff;
+      border: 1px solid rgba(188, 140, 255, 0.3);
+    }
+    .subfilter-row {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      margin-bottom: 20px;
+    }
+    .subfilter-btn {
+      padding: 8px 16px;
+      border-radius: 8px;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      color: var(--text-sub);
+      font-size: 13px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+    .subfilter-btn:hover {
+      border-color: var(--primary);
+      color: var(--text);
+    }
+    .subfilter-btn.active {
+      background: var(--primary);
+      color: #fff;
+      border-color: var(--primary);
+      box-shadow: 0 2px 10px rgba(88, 166, 255, 0.3);
+    }
+
   </style>
 </head>
 <body>
@@ -866,7 +912,7 @@
         <span>•</span>
         <span>JLPT N2 / N1 Dasturchilar Uchun</span>
       </div>
-      <h1 class="hero-title">Yangi 35 Lug'at, Sensei Xatolar Tahlili & Grammatika</h1>
+      <h1 class="hero-title">Yangi 114 Lug'at (CAL + Kaiwa), Sensei Xatolar Tahlili & Grammatika</h1>
       <p class="hero-sub">
         Ushbu sahifada Yuki Sensei bilan o'tkazilgan real suhbat (IT Job Interview) davomida to'plangan <strong>35 ta yangi kasbiy atama</strong>, suhbatdagi <strong>12 ta noaniq gap va ularning to'g'irlangan toza yaponcha nutq namunalari</strong> hamda HR oldida ishonchli gapirish uchun <strong>oltin grammatika qoliplari</strong> jamlandi.
       </p>
@@ -877,11 +923,11 @@
           <div class="stat-lab">CAL chuqur tahliliy modullari (PREP)</div>
         </div>
         <div class="stat-card">
-          <div class="stat-val">35 Ta</div>
-          <div class="stat-lab">Suhbatda to'plangan yangi atamalar</div>
+          <div class="stat-val">114 Ta</div>
+          <div class="stat-lab">Suhbatda to'plangan lug'atlar (35 SES + 79 Kaiwa)</div>
         </div>
         <div class="stat-card">
-          <div class="stat-val">12 Ta</div>
+          <div class="stat-val">13 Ta</div>
           <div class="stat-lab">Sensei tuzatgan real dialog namunalari</div>
         </div>
         <div class="stat-card">
@@ -903,8 +949,8 @@
       <div class="tab-pills">
         <button class="tab-pill active" onclick="switchView('all', this)">Barchasi</button>
         <button class="tab-pill" onclick="switchView('modules-sec', this)">🎯 4 Chuqur Modul (CAL Focus)</button>
-        <button class="tab-pill" onclick="switchView('words-sec', this)">💎 35 Yangi So'zlar</button>
-        <button class="tab-pill" onclick="switchView('corrections-sec', this)">⚠️ Sensei Tahlili (12 Savol)</button>
+        <button class="tab-pill" onclick="switchView('words-sec', this)">💎 114 Yangi So'zlar</button>
+        <button class="tab-pill" onclick="switchView('corrections-sec', this)">⚠️ Sensei Tahlili (13 Savol)</button>
         <button class="tab-pill" onclick="switchView('grammar-sec', this)">📝 Intervyu Grammatikasi</button>
       </div>
     </div>
@@ -1435,13 +1481,19 @@
     <section id="words-sec" class="content-section">
       <div class="section-head">
         <h2>
-          <span>💎 Yangi So'zlar (35 ta Atama)</span>
+          <span>💎 Yangi So'zlar Lug'ati (<span id="totalWordCount">114</span> Ta Atama)</span>
         </h2>
-        <span class="section-count">35 / 35 Atama</span>
+        <span class="section-count" id="activeWordFilterLabel">Barcha so'zlar ko'rsatilmoqda</span>
+      </div>
+
+      <div class="subfilter-row">
+        <button class="subfilter-btn active" onclick="filterWordCategory('all', this)">Barchasi (114)</button>
+        <button class="subfilter-btn" onclick="filterWordCategory('kaiwa', this)">🗣️ Kaiwa.live Erkin Muloqot (79)</button>
+        <button class="subfilter-btn" onclick="filterWordCategory('interview', this)">🏢 CAL & SES Intervyu (35)</button>
       </div>
 
       <div class="words-grid" id="wordsContainer">
-        <!-- Javascript renders words or direct HTML -->
+        <!-- Javascript renders words -->
       </div>
     </section>
 
@@ -1451,7 +1503,7 @@
     <section id="corrections-sec" class="content-section">
       <div class="section-head">
         <h2>
-          <span>⚠️ Suhbatdagi Xatolar & Sensei Tahlili (12 Ta Savol)</span>
+          <span>⚠️ Suhbatdagi Xatolar & Sensei Tahlili (13 Ta Savol)</span>
         </h2>
         <span class="section-count">Real Mock Interview</span>
       </div>
@@ -1962,8 +2014,50 @@
         badText: "一番難しかったのは、会話ライブと。いう。AA on正解は昨日の開発です... この経験から問題オーディションに分析してね...",
         goodText: "一番難しかったのは、会話ライブというAI音声認識の開発です。特にAIの音声が遅くなる問題があり、原因を一つずつ調べました。また、通信処理やエラー処理を見直し、何度もテストしました。この経験から問題の分析力と忍耐力の大切さを学びました。",
         explanation: "Ovozli diktovka tufayli buzilgan so'zlar o'rniga «問題の分析力と忍耐力の大切さ» deb xulosa qilindi. Bu nomzodning ruhiy yetukligini ko'rsatadi."
+      },
+      {
+        id: 13,
+        title: "13. Muloqotni xushmuomala yakunlash (会話の丁寧な終了と時間の伝え方)",
+        question: "「ライフというAIを使ったプラットフォームでの勉強はどのように便利だと感じていますか？」(Savolga javob va vaqt tig'izligida suhbatni chiroyli yakunlash)",
+        badText: "これまであの。私の。ちょっと時間がないので、これで迎え話を終われます。よろしくお願いします。",
+        goodText: "いつでも気軽にAIと話せる点がとても便利だと感じています。ただ、これから次の予定があり少し時間が迫っているため、本日の会話はここまでにさせていただきます。ありがとうございました！",
+        explanation: "Suhbatni to'xtatishda «迎え話» va «終われます» qo'pol va noo'rin xatodir. O'rniga «本日の会話はここまでにさせていただきます» (bugunga shu yerda yakunlashga ruxsat bersangiz) deb xushmuomala Keigo qo'llaniladi."
       }
     ];
+
+        let currentWordCategory = 'all';
+
+    function filterWordCategory(cat, btn) {
+      currentWordCategory = cat;
+      document.querySelectorAll('.subfilter-btn').forEach(b => b.classList.remove('active'));
+      if (btn) btn.classList.add('active');
+
+      const label = document.getElementById('activeWordFilterLabel');
+      if (label) {
+        if (cat === 'all') label.textContent = "Barcha 114 ta so'z ko'rsatilmoqda";
+        else if (cat === 'kaiwa') label.textContent = "Kaiwa.live erkin muloqotida to'plangan 79 ta so'z";
+        else if (cat === 'interview') label.textContent = "CAL & SES intervyusi uchun 35 ta kasbiy atama";
+      }
+      applyWordFilter();
+    }
+
+    function applyWordFilter() {
+      const q = document.getElementById('filterInput').value.toLowerCase().trim();
+      let list = WORDS;
+      if (currentWordCategory !== 'all') {
+        list = list.filter(w => (w.category || 'interview') === currentWordCategory);
+      }
+      if (q) {
+        list = list.filter(w => 
+          w.kanji.toLowerCase().includes(q) ||
+          w.kana.toLowerCase().includes(q) ||
+          w.uz.toLowerCase().includes(q) ||
+          w.en.toLowerCase().includes(q) ||
+          w.exampleJp.toLowerCase().includes(q)
+        );
+      }
+      renderWords(list);
+    }
 
     // RENDER FUNCTIONS
     function renderWords(items) {
@@ -1972,7 +2066,12 @@
         container.innerHTML = `<div style="grid-column: 1/-1; text-align: center; padding: 40px; color: var(--text-muted);">Mos keladigan so'z topilmadi.</div>`;
         return;
       }
-      container.innerHTML = items.map(w => `
+      container.innerHTML = items.map(w => {
+        const catBadge = w.category === 'kaiwa' 
+          ? '<span class="badge-tag badge-kaiwa">🗣️ Kaiwa Muloqot</span>' 
+          : '<span class="badge-tag badge-ses">🏢 CAL & SES</span>';
+        const cleanSpeak = (w.kanji + '。' + (w.exampleJp || '')).replace(/"/g, '&quot;').replace(/'/g, "\'");
+        return `
         <div class="word-card" data-search="${w.kanji} ${w.kana} ${w.uz} ${w.en}">
           <div>
             <div class="word-header">
@@ -1980,7 +2079,10 @@
                 <div class="kanji-text">${w.kanji}</div>
                 <div class="kana-text">${w.kana}</div>
               </div>
-              <span class="word-num">#${w.num}</span>
+              <div style="display:flex; align-items:center; gap:6px;">
+                ${catBadge}
+                <span class="word-num">#${w.num}</span>
+              </div>
             </div>
 
             <div class="word-trans">
@@ -1996,7 +2098,7 @@
           </div>
 
           <div class="word-actions">
-            <button class="btn-audio" onclick="speakJp('${w.kanji}。${w.exampleJp}')">
+            <button class="btn-audio" onclick="speakJp('${cleanSpeak}')">
               🔊 Tinglash
             </button>
             <button class="btn-copy" onclick="copyText('${w.kanji} (${w.kana}) — ${w.uz}')" title="Nusxalash">
@@ -2004,7 +2106,7 @@
             </button>
           </div>
         </div>
-      `).join('');
+      `}).join('');
     }
 
     function renderCorrections(items) {
