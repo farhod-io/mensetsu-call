@@ -1,4 +1,4 @@
-const CACHE_NAME = 'mensetsu-call-v6';
+const CACHE_NAME = 'mensetsu-call-v7';
 
 const STATIC_ASSETS = [
   '/',
