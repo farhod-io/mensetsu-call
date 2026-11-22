@@ -1,8 +1,9 @@
-const CACHE_NAME = 'mensetsu-call-v3';
+const CACHE_NAME = 'mensetsu-call-v4';
 
 const STATIC_ASSETS = [
   '/',
   '/index.html',
+  '/grammar.html',
   '/manifest.json',
   '/favicon.ico',
   '/icons/icon-192.png',

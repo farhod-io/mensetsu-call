@@ -1,0 +1,1399 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CAL Yapon IT Suhbat — 35 Yangi So'zlar & Intervyu Grammatikasi</title>
+
+  <!-- PWA & Mobile Meta Tags -->
+  <meta name="theme-color" content="#0d1117">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="Grammar & Vocab">
+  <meta name="application-name" content="Mensetsu Call">
+  <meta name="description" content="Yapon IT kompaniyalari (CAL, SES) suhbati uchun 35 ta yangi atama, sensei tahlili va oltin grammatika qoliplari">
+
+  <!-- PWA Manifest & Favicons -->
+  <link rel="manifest" href="/manifest.json">
+  <link rel="icon" type="image/svg+xml" href="/icons/icon.svg">
+  <link rel="icon" type="image/png" sizes="32x32" href="/icons/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/icons/favicon-16x16.png">
+  <link rel="apple-touch-icon" href="/icons/apple-touch-icon.png">
+  <link rel="shortcut icon" href="/favicon.ico">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Noto+Sans+JP:wght@400;500;700&family=Fira+Code:wght@400;600&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --bg: #0d1117;
+      --surface: #161b22;
+      --surface-hover: #1f242c;
+      --surface-card: #1c2128;
+      --border: #30363d;
+      --border-accent: rgba(56, 139, 253, 0.3);
+      --text: #f0f6fc;
+      --text-muted: #8b949e;
+      --text-sub: #c9d1d9;
+      --primary: #58a6ff;
+      --primary-glow: rgba(88, 166, 255, 0.15);
+      --red: #f85149;
+      --red-bg: rgba(248, 81, 73, 0.12);
+      --yellow: #d29922;
+      --yellow-bg: rgba(210, 153, 34, 0.12);
+      --green: #3fb950;
+      --green-bg: rgba(63, 185, 80, 0.12);
+      --purple: #bc8cff;
+      --purple-bg: rgba(188, 140, 255, 0.12);
+      --font-sans: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+      --font-jp: 'Noto Sans JP', 'Hiragino Sans', 'Yu Gothic', sans-serif;
+      --card-radius: 16px;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: var(--font-sans);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+      padding-bottom: 90px;
+    }
+
+    .container {
+      max-width: 1080px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    /* Top Global Navigation Bar */
+    .top-nav {
+      background: rgba(22, 27, 34, 0.85);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+    .top-nav-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 64px;
+    }
+    .brand-link {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      text-decoration: none;
+      color: var(--text);
+      font-weight: 700;
+      font-size: 16px;
+    }
+    .brand-logo-pill {
+      background: linear-gradient(135deg, #1e3a8a, #0284c7);
+      color: #fff;
+      padding: 4px 10px;
+      border-radius: 8px;
+      font-size: 13px;
+      font-weight: 800;
+      letter-spacing: 1px;
+    }
+    .nav-actions {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .nav-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 8px 14px;
+      border-radius: 8px;
+      font-size: 13px;
+      font-weight: 600;
+      text-decoration: none;
+      transition: all 0.2s ease;
+      border: 1px solid var(--border);
+      background: var(--surface);
+      color: var(--text-sub);
+      cursor: pointer;
+    }
+    .nav-btn:hover {
+      background: var(--surface-hover);
+      color: var(--text);
+      border-color: var(--primary);
+    }
+    .nav-btn.active {
+      background: rgba(56, 189, 248, 0.12);
+      border-color: #38bdf8;
+      color: #38bdf8;
+    }
+    .nav-btn.btn-main {
+      background: linear-gradient(135deg, #2563eb, #1d4ed8);
+      color: #fff;
+      border: none;
+    }
+
+    /* Hero */
+    .hero {
+      padding: 40px 0 24px;
+      border-bottom: 1px solid var(--border);
+      background: radial-gradient(circle at 50% 20%, rgba(56, 139, 253, 0.08) 0%, transparent 60%);
+    }
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 4px 12px;
+      border-radius: 9999px;
+      background: rgba(56, 189, 248, 0.1);
+      border: 1px solid rgba(56, 189, 248, 0.25);
+      color: #38bdf8;
+      font-size: 12px;
+      font-weight: 700;
+      margin-bottom: 16px;
+    }
+    .hero-title {
+      font-size: 32px;
+      font-weight: 800;
+      line-height: 1.3;
+      margin-bottom: 12px;
+      background: linear-gradient(135deg, #f0f6fc 30%, #58a6ff 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    .hero-sub {
+      color: var(--text-muted);
+      font-size: 15px;
+      max-width: 800px;
+      line-height: 1.7;
+    }
+
+    /* Stats Grid */
+    .stats-row {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 14px;
+      margin-top: 24px;
+    }
+    .stat-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 14px 18px;
+    }
+    .stat-val {
+      font-size: 24px;
+      font-weight: 800;
+      color: var(--primary);
+    }
+    .stat-lab {
+      font-size: 12px;
+      color: var(--text-muted);
+      margin-top: 2px;
+    }
+
+    /* Sticky Search & Tabs */
+    .controls-wrapper {
+      position: sticky;
+      top: 64px;
+      z-index: 90;
+      background: rgba(13, 17, 23, 0.95);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      border-bottom: 1px solid var(--border);
+      padding: 14px 0;
+    }
+    .search-input-group {
+      position: relative;
+      margin-bottom: 12px;
+    }
+    .search-icon {
+      position: absolute;
+      left: 14px;
+      top: 50%;
+      transform: translateY(-50%);
+      color: var(--text-muted);
+    }
+    .search-input {
+      width: 100%;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 12px 14px 12px 42px;
+      color: var(--text);
+      font-size: 14px;
+      font-family: inherit;
+      outline: none;
+      transition: all 0.2s;
+    }
+    .search-input:focus {
+      border-color: var(--primary);
+      box-shadow: 0 0 0 3px rgba(88, 166, 255, 0.2);
+    }
+    .tab-pills {
+      display: flex;
+      gap: 8px;
+      overflow-x: auto;
+      padding-bottom: 4px;
+      scrollbar-width: none;
+    }
+    .tab-pills::-webkit-scrollbar { display: none; }
+    .tab-pill {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      color: var(--text-sub);
+      padding: 8px 16px;
+      border-radius: 9999px;
+      font-size: 13px;
+      font-weight: 600;
+      white-space: nowrap;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+    .tab-pill:hover {
+      background: var(--surface-hover);
+      color: var(--text);
+    }
+    .tab-pill.active {
+      background: linear-gradient(135deg, #1d4ed8, #2563eb);
+      border-color: #3b82f6;
+      color: #fff;
+    }
+
+    /* Section Titles */
+    .section-head {
+      margin: 40px 0 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 12px;
+    }
+    .section-head h2 {
+      font-size: 22px;
+      font-weight: 800;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .section-count {
+      font-size: 12px;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      color: var(--primary);
+      padding: 3px 10px;
+      border-radius: 9999px;
+      font-weight: 700;
+    }
+
+    /* Words Grid */
+    .words-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+      gap: 16px;
+    }
+    .word-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--card-radius);
+      padding: 18px;
+      transition: transform 0.2s, border-color 0.2s, box-shadow 0.2s;
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+    .word-card:hover {
+      transform: translateY(-2px);
+      border-color: var(--primary);
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.35);
+    }
+    .word-header {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 10px;
+      margin-bottom: 10px;
+    }
+    .word-num {
+      font-size: 11px;
+      font-weight: 700;
+      color: var(--text-muted);
+      background: var(--surface-card);
+      padding: 2px 8px;
+      border-radius: 6px;
+    }
+    .kanji-text {
+      font-family: var(--font-jp);
+      font-size: 24px;
+      font-weight: 800;
+      color: #f0f6fc;
+      line-height: 1.2;
+    }
+    .kana-text {
+      font-family: var(--font-jp);
+      font-size: 13px;
+      color: #58a6ff;
+      margin-top: 3px;
+      font-weight: 500;
+    }
+    .word-trans {
+      margin: 12px 0;
+      padding: 10px 12px;
+      background: var(--surface-card);
+      border-radius: 8px;
+      border-left: 3px solid var(--primary);
+    }
+    .uz-trans {
+      font-size: 14px;
+      font-weight: 700;
+      color: #e6edf3;
+    }
+    .en-trans {
+      font-size: 12px;
+      color: var(--text-muted);
+      margin-top: 2px;
+    }
+    .word-example {
+      font-size: 12.5px;
+      color: var(--text-sub);
+      background: rgba(13, 17, 23, 0.6);
+      padding: 10px;
+      border-radius: 8px;
+      margin-bottom: 12px;
+      border: 1px dashed rgba(48, 54, 61, 0.8);
+    }
+    .word-example strong {
+      color: #38bdf8;
+      display: block;
+      margin-bottom: 3px;
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+    .word-example .jp {
+      font-family: var(--font-jp);
+      color: #f0f6fc;
+      margin-bottom: 4px;
+    }
+    .word-example .uz {
+      color: var(--text-muted);
+      font-style: italic;
+    }
+    .word-actions {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      margin-top: auto;
+    }
+    .btn-audio {
+      flex: 1;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+      background: rgba(56, 139, 253, 0.1);
+      border: 1px solid rgba(56, 139, 253, 0.3);
+      color: #58a6ff;
+      padding: 8px 12px;
+      border-radius: 8px;
+      font-size: 12px;
+      font-weight: 700;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+    .btn-audio:hover {
+      background: var(--primary);
+      color: #fff;
+    }
+    .btn-copy {
+      background: var(--surface-card);
+      border: 1px solid var(--border);
+      color: var(--text-muted);
+      padding: 8px 12px;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 12px;
+      transition: all 0.2s;
+    }
+    .btn-copy:hover {
+      color: var(--text);
+      border-color: var(--text-muted);
+    }
+
+    /* Comparison / Correction Cards (Sensei feedback) */
+    .corrections-list {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+    .corr-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--card-radius);
+      padding: 20px;
+      position: relative;
+    }
+    .corr-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 14px;
+      gap: 12px;
+    }
+    .corr-question-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-weight: 700;
+      font-size: 14px;
+      color: #f0f6fc;
+    }
+    .q-pill {
+      background: linear-gradient(135deg, #f59e0b, #d97706);
+      color: #fff;
+      font-size: 11px;
+      font-weight: 800;
+      padding: 2px 8px;
+      border-radius: 4px;
+    }
+    .comparison-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 14px;
+      margin-bottom: 14px;
+    }
+    @media (max-width: 768px) {
+      .comparison-grid { grid-template-columns: 1fr; }
+      .words-grid { grid-template-columns: 1fr; }
+    }
+    .box-bad {
+      background: var(--red-bg);
+      border: 1px solid rgba(248, 81, 73, 0.4);
+      border-radius: 10px;
+      padding: 14px;
+    }
+    .box-bad .tag {
+      color: #f85149;
+      font-size: 12px;
+      font-weight: 800;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      margin-bottom: 6px;
+    }
+    .box-good {
+      background: var(--green-bg);
+      border: 1px solid rgba(63, 185, 80, 0.4);
+      border-radius: 10px;
+      padding: 14px;
+    }
+    .box-good .tag {
+      color: #3fb950;
+      font-size: 12px;
+      font-weight: 800;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      margin-bottom: 6px;
+    }
+    .quote-text {
+      font-family: var(--font-jp);
+      font-size: 14px;
+      line-height: 1.6;
+      color: #f0f6fc;
+    }
+    .sensei-explanation {
+      background: var(--surface-card);
+      border-radius: 10px;
+      padding: 12px 16px;
+      border-left: 4px solid #f59e0b;
+      font-size: 13px;
+      color: #d1d5db;
+    }
+    .sensei-explanation strong {
+      color: #f59e0b;
+      display: block;
+      margin-bottom: 4px;
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    /* Grammar Rules Section */
+    .grammar-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+      gap: 18px;
+    }
+    .g-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--card-radius);
+      padding: 20px;
+    }
+    .g-title {
+      font-size: 16px;
+      font-weight: 800;
+      color: #38bdf8;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      margin-bottom: 8px;
+    }
+    .g-formula {
+      font-family: 'Fira Code', monospace;
+      font-size: 13px;
+      background: rgba(13, 17, 23, 0.8);
+      border: 1px solid var(--border);
+      padding: 8px 12px;
+      border-radius: 8px;
+      color: #a5f3fc;
+      margin-bottom: 12px;
+    }
+    .g-desc {
+      font-size: 13px;
+      color: var(--text-sub);
+      margin-bottom: 12px;
+    }
+    .g-example {
+      background: var(--surface-card);
+      padding: 12px;
+      border-radius: 8px;
+      font-size: 13px;
+    }
+    .g-example .jp {
+      font-family: var(--font-jp);
+      color: #f0f6fc;
+      font-weight: 600;
+      margin-bottom: 4px;
+    }
+    .g-example .uz {
+      color: var(--text-muted);
+      font-size: 12px;
+    }
+
+    /* Toast */
+    .toast {
+      position: fixed;
+      bottom: 24px;
+      right: 24px;
+      background: #1f2937;
+      color: #fff;
+      padding: 12px 20px;
+      border-radius: 10px;
+      font-size: 14px;
+      font-weight: 600;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+      border: 1px solid var(--border);
+      z-index: 1000;
+      opacity: 0;
+      transform: translateY(20px);
+      transition: all 0.3s ease;
+      pointer-events: none;
+    }
+    .toast.show {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Top Global Navigation -->
+  <nav class="top-nav">
+    <div class="container top-nav-inner">
+      <a href="/index.html" class="brand-link">
+        <span class="brand-logo-pill">CAL IT</span>
+        <span>Yapon HR Intervyusi</span>
+      </a>
+
+      <div class="nav-actions">
+        <a href="/index.html" class="nav-btn">
+          <span>🏠 Savol-Javoblar</span>
+        </a>
+        <a href="/grammar.html" class="nav-btn active">
+          <span>📚 35 Lug'at & Grammatika</span>
+        </a>
+        <button class="nav-btn btn-main" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">
+          <span>⬆️ Tepaga</span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Header -->
+  <header class="hero">
+    <div class="container">
+      <div class="hero-badge">
+        <span>💼 就職面接 (IT Job Interview)</span>
+        <span>•</span>
+        <span>JLPT N2 / N1 Dasturchilar Uchun</span>
+      </div>
+      <h1 class="hero-title">Yangi 35 Lug'at, Sensei Xatolar Tahlili & Grammatika</h1>
+      <p class="hero-sub">
+        Ushbu sahifada Yuki Sensei bilan o'tkazilgan real suhbat (IT Job Interview) davomida to'plangan <strong>35 ta yangi kasbiy atama</strong>, suhbatdagi <strong>12 ta noaniq gap va ularning to'g'irlangan toza yaponcha nutq namunalari</strong> hamda HR oldida ishonchli gapirish uchun <strong>oltin grammatika qoliplari</strong> jamlandi.
+      </p>
+
+      <div class="stats-row">
+        <div class="stat-card">
+          <div class="stat-val">35 Ta</div>
+          <div class="stat-lab">Suhbatda to'plangan yangi so'zlar</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-val">12 Ta</div>
+          <div class="stat-lab">Sensei tuzatgan real dialog namunalari</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-val">10+ Qolip</div>
+          <div class="stat-lab">Intervyu uchun N2/N1 Keigo grammatikasi</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-val">100% Oflayn</div>
+          <div class="stat-lab">PWA audio talaffuz va kesh</div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Sticky Controls Bar -->
+  <div class="controls-wrapper">
+    <div class="container">
+      <div class="search-input-group">
+        <svg class="search-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+        <input type="text" id="filterInput" class="search-input" placeholder="So'z, kanji, o'zbekcha tarjima yoki grammatika qidiring (masalan: 携わる, 遅延, 解決経験, 報連相)...">
+      </div>
+
+      <div class="tab-pills">
+        <button class="tab-pill active" onclick="switchView('all', this)">Barchasi</button>
+        <button class="tab-pill" onclick="switchView('words-sec', this)">💎 35 Yangi So'zlar</button>
+        <button class="tab-pill" onclick="switchView('corrections-sec', this)">⚠️ Sensei Tahlili (12 Savol)</button>
+        <button class="tab-pill" onclick="switchView('grammar-sec', this)">📝 Intervyu Grammatikasi</button>
+      </div>
+    </div>
+  </div>
+
+  <main class="container">
+
+    <!-- ==========================================
+         SECTION 1: 35 TA YANGI SO'ZLAR
+         ========================================== -->
+    <section id="words-sec" class="content-section">
+      <div class="section-head">
+        <h2>
+          <span>💎 Yangi So'zlar (35 ta Atama)</span>
+        </h2>
+        <span class="section-count">35 / 35 Atama</span>
+      </div>
+
+      <div class="words-grid" id="wordsContainer">
+        <!-- Javascript renders words or direct HTML -->
+      </div>
+    </section>
+
+    <!-- ==========================================
+         SECTION 2: 12 DIALOG VA SENSEI TUZATISHLARI
+         ========================================== -->
+    <section id="corrections-sec" class="content-section">
+      <div class="section-head">
+        <h2>
+          <span>⚠️ Suhbatdagi Xatolar & Sensei Tahlili (12 Ta Savol)</span>
+        </h2>
+        <span class="section-count">Real Mock Interview</span>
+      </div>
+
+      <div class="corrections-list" id="correctionsContainer">
+        <!-- Real dialogue comparisons inserted here -->
+      </div>
+    </section>
+
+    <!-- ==========================================
+         SECTION 3: INTERVYU GRAMMATIKASI & KEIGO
+         ========================================== -->
+    <section id="grammar-sec" class="content-section">
+      <div class="section-head">
+        <h2>
+          <span>📝 Suhbatda Ball Beruvchi Oltin Grammatika Qoliplari</span>
+        </h2>
+        <span class="section-count">N2 / N1 Keigo</span>
+      </div>
+
+      <div class="grammar-grid">
+        <!-- G1 -->
+        <div class="g-card">
+          <div class="g-title">1. 〜に携わる（たずさわる）</div>
+          <div class="g-formula">Ot + に携わる / 携わってまいりました</div>
+          <p class="g-desc">Shunchaki "ishladim" (やりました) emas, ma'lum bir loyiha yoki soha mas'uliyatida qatnashganlikni chuqur va rasmiy ifodalaydi.</p>
+          <div class="g-example">
+            <div class="jp">「御社では上流工程から下流工程まで、幅広い開発プロジェクトに携わりたいと考えております。」</div>
+            <div class="uz">Kompaniyangizda loyihalashdan to topshirishgacha bo'lgan keng qamrovli loyihalarda ishtirok etishni xohlayman.</div>
+          </div>
+        </div>
+
+        <!-- G2 -->
+        <div class="g-card">
+          <div class="g-title">2. 〜を活かして、〜に貢献する</div>
+          <div class="g-formula">Tajriba/Ko'nikma + を活かし、御社に貢献したいと考えております</div>
+          <p class="g-desc">HR har doim nomzod o'z bilimini kompaniyaga qanday foyda qilib keltirishini kutadi. PREP xulosasi uchun ideal qolip.</p>
+          <div class="g-example">
+            <div class="jp">「これまでのWeb開発とAI連携の経験を活かし、御社のプロジェクトに早期に貢献いたします。」</div>
+            <div class="uz">Shu vaqtgacha to'plagan Web va AI integratsiyasi tajribamni ishga solib, kompaniyangiz loyihalariga tezkor hissa qo'shaman.</div>
+          </div>
+        </div>
+
+        <!-- G3 -->
+        <div class="g-card">
+          <div class="g-title">3. 実務経験を積み、〜を高める</div>
+          <div class="g-formula">実務経験を積み ＋ 技術力／専門性を高める</div>
+          <p class="g-desc">"O'rganmoqchiman" (勉強したい) desangiz, HR sizni maktabga emas, ishga kelayotganingizni eslatadi. Shu sabab "amaliy tajriba to'plab, mahoratimni oshirmoqchiman" deyiladi.</p>
+          <div class="g-example">
+            <div class="jp">「入社後は現場で実務経験を積み、バックエンドやAPI設計の技術力を高めてまいります。」</div>
+            <div class="uz">Ishga kirgach, real amaliyotda tajriba oshirib, backend va API arxitekturasi bo'yicha mahoratimni yuksaltiraman.</div>
+          </div>
+        </div>
+
+        <!-- G4 -->
+        <div class="g-card">
+          <div class="g-title">4. 主体的に取り組む（しゅたいてきに）</div>
+          <div class="g-formula">Muammo + に対して、主体的に取り組みました</div>
+          <p class="g-desc">Kutib o'tirmasdan, birov buyurishini kutmay o'z ixtiyori va tashabbusi bilan harakat qilish (proaktivlik).</p>
+          <div class="g-example">
+            <div class="jp">「音声遅延の原因を突き止めるため、通信処理とエラーハンドリングの見直しに主体的に取り組みました。」</div>
+            <div class="uz">Ovoz kechikishi sababini aniqlash maqsadida tarmoq va xatoliklarni qayta ishlashni o'z tashabbusim bilan ko'rib chiqdim.</div>
+          </div>
+        </div>
+
+        <!-- G5 -->
+        <div class="g-card">
+          <div class="g-title">5. 報告・連絡・相談（報連相）の徹底</div>
+          <div class="g-formula">日頃から報連相（ほうれんそう）を徹底する</div>
+          <p class="g-desc">Yapon kompaniyalaridagi eng muqaddas jamoaviy qoida. Chet ellik muhandisdan aynan shu sifat juda qattiq tekshiriladi.</p>
+          <div class="g-example">
+            <div class="jp">「不明点があれば自分で調べた上で、手遅れになる前に先輩へ報連相を徹底いたします。」</div>
+            <div class="uz">Noaniq nuqta bo'lsa, avval o'zim o'rganib chiqib, kech bo'lishidan oldin darhol maslahatlashuvni amalga oshiraman.</div>
+          </div>
+        </div>
+
+        <!-- G6 -->
+        <div class="g-card">
+          <div class="g-title">6. 〜大切さを学びました / 痛感しました</div>
+          <div class="g-formula">経験 + を通じて、〜の大切さを学びました</div>
+          <p class="g-desc">Qiyinchilikni qanday yengganingiz haqidagi savol (困難を乗り越えた経験) xulosasi uchun 100% mos keladigan jumlalar.</p>
+          <div class="g-example">
+            <div class="jp">「このトラブル対応を通じて、諦めずに原因を一つずつ分析する忍耐力の大切さを学びました。」</div>
+            <div class="uz">Ushbu muammoni hal qilish orqali sababni birma-bir tahlil qilish va sabr-toqatning naqadar muhimligini angladim.</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <div class="toast" id="toastMsg">Xabar</div>
+
+  <script>
+    // 35 WORDS DATA
+    const WORDS = [
+      {
+        num: 1,
+        kanji: "開発経験",
+        kana: "かいはつけいけん",
+        uz: "Rivojlantirish / Dasturlash tajribasi",
+        en: "Development experience",
+        exampleJp: "これまでのWeb開発経験についてお話しいたします。",
+        exampleUz: "Shu paytgacha bo'lgan veb-dasturlash tajribam haqida gapirib beraman."
+      },
+      {
+        num: 2,
+        kanji: "サービス",
+        kana: "さーびす",
+        uz: "Xizmat / Dasturiy servis",
+        en: "Service / Product",
+        exampleJp: "AIと日本語で会話を練習できるサービスを開発しています。",
+        exampleUz: "AI bilan yapon tilida muloqotni mashq qiladigan servis yaratmoqdaman."
+      },
+      {
+        num: 3,
+        kanji: "バックエンド",
+        kana: "ばっくえんど",
+        uz: "Server tomoni (Backend)",
+        en: "Backend",
+        exampleJp: "フロントエンドだけでなく、バックエンド開発の知識も深めたいです。",
+        exampleUz: "Faqat frontend emas, backend dasturlash bilimlarini ham chuqurlashtirmoqchiman."
+      },
+      {
+        num: 4,
+        kanji: "志望動機",
+        kana: "しぼうどうき",
+        uz: "Ishga topshirish sababi / Maqsadi",
+        en: "Reason for applying",
+        exampleJp: "御社を志望した動機は、多様なプロジェクトに携われる点にあります。",
+        exampleUz: "Kompaniyangizni tanlaganim sababi — turli loyihalarda qatnasha olishidadir."
+      },
+      {
+        num: 5,
+        kanji: "連携",
+        kana: "れんけい",
+        uz: "Hamkorlik, integratsiya, bog'lanish",
+        en: "Collaboration / Integration",
+        exampleJp: "フロントエンドとAI機能をAPIで連携させる部分を担当しました。",
+        exampleUz: "Frontend va AI imkoniyatlarini API orqali integratsiya qilish qismini bajardim."
+      },
+      {
+        num: 6,
+        kanji: "フィードバック",
+        kana: "ふぃーどばっく",
+        uz: "Qayta aloqa (Taqriz / Fikr)",
+        en: "Feedback",
+        exampleJp: "AIは学生の文法の間違いをチェックし、フィードバックを提供します。",
+        exampleUz: "AI talabaning grammatik xatolarini tekshirib, qayta fikr (feedback) beradi."
+      },
+      {
+        num: 7,
+        kanji: "貢献",
+        kana: "こうけん",
+        uz: "Hissa qo‘shish, foyda keltirish",
+        en: "Contribution",
+        exampleJp: "自分のフルスタック技術を活かし、御社に貢献したいと考えています。",
+        exampleUz: "O'z full-stack ko'nikmalarimni ishga solib, kompaniyangizga hissa qo'shmoqchiman."
+      },
+      {
+        num: 8,
+        kanji: "品質",
+        kana: "ひんしつ",
+        uz: "Sifat (Dasturiy sifat)",
+        en: "Quality",
+        exampleJp: "日本のIT企業は品質と堅牢性に徹底したこだわりを持っています。",
+        exampleUz: "Yaponiya IT kompaniyalari dastur sifati va mustahkamligiga o'ta jiddiy e'tibor qaratadi."
+      },
+      {
+        num: 9,
+        kanji: "困難",
+        kana: "こんなん",
+        uz: "Qiyinchilik, murakkablik",
+        en: "Difficulty / Hardship",
+        exampleJp: "開発で困難に直面した時も、諦めずに原因を分析しました。",
+        exampleUz: "Dasturlashda qiyinchilikka duch kelganda ham taslim bo'lmay, sababini tahlil qildim."
+      },
+      {
+        num: 10,
+        kanji: "乗り越える",
+        kana: "のりこえる",
+        uz: "Yengib o‘tmoq, yechim topmoq",
+        en: "To overcome",
+        exampleJp: "チームで協力し、音声遅延の課題を乗り越えました。",
+        exampleUz: "Jamoa bilan hamkorlikda ovoz kechikishi muammosini yengib o'tdik."
+      },
+      {
+        num: 11,
+        kanji: "協力",
+        kana: "きょうりょく",
+        uz: "Hamkorlik, birgalikda ishlash",
+        en: "Cooperation",
+        exampleJp: "チームメンバーと協力しながら、高品質なコードを作成します。",
+        exampleUz: "Jamoa a'zolari bilan hamkorlik qilib, yuqori sifatli kod yozaman."
+      },
+      {
+        num: 12,
+        kanji: "遅延",
+        kana: "ちえん",
+        uz: "Kechikish, kechikish vaqti (Latency)",
+        en: "Delay / Latency",
+        exampleJp: "回線が不安定な時に音声データの遅延が発生しました。",
+        exampleUz: "Internet aloqasi beqaror bo'lganda audio ma'lumotlarda kechikish yuz berdi."
+      },
+      {
+        num: 13,
+        kanji: "原因",
+        kana: "げんいん",
+        uz: "Sabab, asosiy omil",
+        en: "Cause / Root cause",
+        exampleJp: "エラーログを一つずつ確認し、問題の根本的な原因を突き止めました。",
+        exampleUz: "Xatolik loglarini bittalab ko'rib chiqib, muammoning tub sababini aniqladim."
+      },
+      {
+        num: 14,
+        kanji: "主体的に",
+        kana: "しゅたいてきに",
+        uz: "O'zi tashabbus ko'rsatib (Proaktiv)",
+        en: "Proactively / Independently",
+        exampleJp: "指示を待つだけでなく、主体的に問題解決に取り組みました。",
+        exampleUz: "Faqat ko'rsatma kutmasdan, muammoni yechishga o'z tashabbusim bilan kirishdim."
+      },
+      {
+        num: 15,
+        kanji: "実務経験",
+        kana: "じつむけいけん",
+        uz: "Amaliy ish tajribasi",
+        en: "Practical / Industry experience",
+        exampleJp: "入社後は現場で実務経験を積み、早期に即戦力になりたいです。",
+        exampleUz: "Ishga kirgach amaliy tajriba to'plab, tezda jamoaga tayyor kuch (即戦力) bo'lmoqchiman."
+      },
+      {
+        num: 16,
+        kanji: "技術力",
+        kana: "ぎじゅつりょく",
+        uz: "Texnik mahorat / Ko'nikma",
+        en: "Technical ability",
+        exampleJp: "御社の多様なプロジェクトを通じて技術力を高めたいです。",
+        exampleUz: "Kompaniyangizning rang-barang loyihalari orqali texnik mahoratimni oshirmoqchiman."
+      },
+      {
+        num: 17,
+        kanji: "分野",
+        kana: "ぶんや",
+        uz: "Soha yoki yo‘nalish",
+        en: "Field / Domain",
+        exampleJp: "Webアプリケーション開発とAI連携の分野に興味があります。",
+        exampleUz: "Web ilovalar va AI integratsiyasi sohasiga qiziqaman."
+      },
+      {
+        num: 18,
+        kanji: "設計",
+        kana: "せっけい",
+        uz: "Loyihalash, arxitektura tuzish",
+        en: "Design / Architecture",
+        exampleJp: "将来はシステム全体を設計できるアーキテクトを目指しています。",
+        exampleUz: "Kelajakda tizimni to'liq loyihalay oladigan arxitektor bo'lishni maqsad qilganman."
+      },
+      {
+        num: 19,
+        kanji: "機械学習",
+        kana: "きかいがくしゅう",
+        uz: "Mashina o‘rganishi (Machine learning)",
+        en: "Machine Learning",
+        exampleJp: "機械学習モデルを活用したサービス開発に興味があります。",
+        exampleUz: "Machine learning modellaridan foydalanilgan xizmatlar yaratishga qiziqaman."
+      },
+      {
+        num: 20,
+        kanji: "バックエンド開発",
+        kana: "ばっくえんどかいはつ",
+        uz: "Orqa tomon (Backend) dasturlash",
+        en: "Backend development",
+        exampleJp: "データベース設計やバックエンド開発のスキルを伸ばしたいです。",
+        exampleUz: "Ma'lumotlar bazasi va backend ishlab chiqish ko'nikmalarini rivojlantirmoqchiman."
+      },
+      {
+        num: 21,
+        kanji: "通信処理",
+        kana: "つうしんしょり",
+        uz: "Tarmoq aloqasini qayta ishlash",
+        en: "Network / Communication processing",
+        exampleJp: "APIの通信処理を見直し、データ転送を最適化しました。",
+        exampleUz: "API aloqa jarayonini qayta ko'rib chiqib, ma'lumot almashinuvini optimallashtirdim."
+      },
+      {
+        num: 22,
+        kanji: "エラー処理",
+        kana: "えらーしょり",
+        uz: "Xatoliklarni ushlash va bartaraf etish",
+        en: "Error handling",
+        exampleJp: "想定外の例外を防ぐため、徹底したエラー処理を実装しました。",
+        exampleUz: "Kutilmagan xatoliklarning oldini olish uchun puxta error handling yozdim."
+      },
+      {
+        num: 23,
+        kanji: "携わる",
+        kana: "たずさわる",
+        uz: "Ishtirok etmoq, shug'ullanmoq",
+        en: "To participate / be involved in",
+        exampleJp: "御社の基幹システム開発にぜひ携わりたいと考えております。",
+        exampleUz: "Kompaniyangizning asosiy tizim loyihalarida albatta ishtirok etishni istayman."
+      },
+      {
+        num: 24,
+        kanji: "貢献する",
+        kana: "こうけんする",
+        uz: "Hissa qo'shmoq, foyda keltirmoq",
+        en: "To contribute",
+        exampleJp: "自身の技術力と行動力で、チームの目標達成に貢献いたします。",
+        exampleUz: "O'z texnik mahoratim va faolligim bilan jamoa maqsadlariga hissa qo'shaman."
+      },
+      {
+        num: 25,
+        kanji: "身につける",
+        kana: "みにつける",
+        uz: "O'zlashtirmoq, egallamoq",
+        en: "To acquire / master",
+        exampleJp: "日本の商習慣と確かな開発手法を身につけたいです。",
+        exampleUz: "Yapon biznes odoblari va mustahkam dasturlash uslublarini o'zlashtirmoqchiman."
+      },
+      {
+        num: 26,
+        kanji: "キャリアプラン",
+        kana: "きゃりあぷらん",
+        uz: "Kasbiy reja / Karyera istiqboli",
+        en: "Career plan",
+        exampleJp: "3年後には単独で設計を任せてもらえるエンジニアになる計画です。",
+        exampleUz: "3 yildan keyin mustaqil ravishda loyihalash topshiriladigan muhandis bo'lish niyatidaman."
+      },
+      {
+        num: 27,
+        kanji: "知識",
+        kana: "ちしき",
+        uz: "Bilim, ma'lumot",
+        en: "Knowledge",
+        exampleJp: "大学と個人開発で培った知識を実務でフル活用します。",
+        exampleUz: "Universitet va mustaqil loyihalarda to'plagan bilimlarimni amaliyotda to'liq qo'llayman."
+      },
+      {
+        num: 28,
+        kanji: "開発現場",
+        kana: "かいはつげんば",
+        uz: "Dasturiy ta'minot ishlab chiqish maydoni",
+        en: "Development workplace / environment",
+        exampleJp: "日本の開発現場での阿吽の呼吸や進め方を学びたいです。",
+        exampleUz: "Yaponiya ishlab chiqish maydonidagi ish uslubi va jamoaviy uyg'unlikni o'rganmoqchiman."
+      },
+      {
+        num: 29,
+        kanji: "対応",
+        kana: "たいおう",
+        uz: "Moslashish, qoplash, yechish",
+        en: "Handling / Support / Adaptation",
+        exampleJp: "設計から開発、運用保守まで幅広く対応できる人材を目指します。",
+        exampleUz: "Loyihalashdan to dasturlash va qo'llab-quvvatlashgacha keng javob bera oladigan mutaxassis bo'laman."
+      },
+      {
+        num: 30,
+        kanji: "能力",
+        kana: "のうりょく",
+        uz: "Qobiliyat, malaka, iqtidor",
+        en: "Ability / Competence",
+        exampleJp: "技術力だけでなく、日本語でのコミュニケーション能力も重要です。",
+        exampleUz: "Faqat texnik mahorat emas, yaponcha muloqot qobiliyati ham juda muhimdir."
+      },
+      {
+        num: 31,
+        kanji: "報告連絡相談",
+        kana: "ほうれんそう",
+        uz: "Hisobot, aloqa va maslahat (Ho-Ren-So)",
+        en: "Reporting, Contacting, Consulting",
+        exampleJp: "トラブルの早期発見のため、日頃の報連相を徹底いたします。",
+        exampleUz: "Muammolarni erta aniqlash uchun muntazam hisobot va maslahatni qat'iy saqlayman."
+      },
+      {
+        num: 32,
+        kanji: "円滑",
+        kana: "えんかつ",
+        uz: "Silliq, muammosiz, ravon",
+        en: "Smooth / Harmonious",
+        exampleJp: "円滑なチーム開発のために、積極的な情報共有を心がけています。",
+        exampleUz: "Ravon jamoaviy rivojlanish uchun ma'lumotlarni faol ulashishga intilaman."
+      },
+      {
+        num: 33,
+        kanji: "粘り強く",
+        kana: "ねばりづよく",
+        uz: "Sabr-toqatli, qat'iyat bilan",
+        en: "Perseveringly / Tenaciously",
+        exampleJp: "解決が難しいバグも、粘り強くデバッグを行いました。",
+        exampleUz: "Yechilishi qiyin xatoliklarda ham qat'iyat bilan sabr qilib debug qildim."
+      },
+      {
+        num: 34,
+        kanji: "忍耐力",
+        kana: "にんたいりょく",
+        uz: "Sabr-toqat va chidamlilik kuchi",
+        en: "Perseverance / Patience",
+        exampleJp: "複雑な課題に取り組む中で、分析力と忍耐力が身につきました。",
+        exampleUz: "Murakkab masalalar ustida ishlash davomida tahlil qobiliyati va sabr kuchini shakllantirdim."
+      },
+      {
+        num: 35,
+        kanji: "課題",
+        kana: "かだい",
+        uz: "Vazifa, muammo, o'sish nuqtasi",
+        en: "Task / Challenge / Problem",
+        exampleJp: "技術的な課題を一つずつ乗り越えることにやりがいを感じます。",
+        exampleUz: "Texnik muammolarni birma-bir yengib o'tishda katta kasbiy qoniqish his qilaman."
+      }
+    ];
+
+    // 12 REAL DIALOGUE CORRECTIONS
+    const CORRECTIONS = [
+      {
+        id: 1,
+        title: "1. Ish tajribasi va o'tgan yillar (開発経験 & 西暦)",
+        question: "これまでの開発経験について教えていただけますか？ (Shu paytgacha bo'lgan dasturlash tajribangiz haqida aytib bering?)",
+        badText: "こんにちは。おかげさま元気です。ではこれまであのあの解決経験について考えていただきます。あの。私は2027年からウェブ開発に取り組んでいます...",
+        goodText: "こんにちは。おかげさまで元気です。ではこれまでの開発経験についてお話しいたします。私は2021年からウェブ開発に取り組んでいます。主にReact、TypeScript、Next.jsを使ってきました。プロジェクトだけでなく、バックエンド開発も経験しています。また、自分のプロジェクトとして、AIと話して日本語を学ぶサービスを開発しています。",
+        explanation: "«解決経験» so'zi noto'g'ri, dasturlash tajribasi uchun «開発経験» ishlatiladi. Shuningdek, «2027年» kelasi zamon bo'lgani uchun o'tgan yillar (masalan: 2021 yildan buyon) deb aniq aytilishi shart."
+      },
+      {
+        id: 2,
+        title: "2. O'z loyihasi — Kaiwa Live (プロジェクト説明)",
+        question: "AIと話すサービス開発について、もう少し詳しく教えていただけますか？",
+        badText: "私の、私は会話。ライフという日本語の学習サービスを開発しています。このサービスでは、学生がAIと日本語で会話を練習。をすることができます...",
+        goodText: "私は「会話ライフ」という日本語学習サービスを開発しています。このサービスでは、学生がAIと日本語で会話練習をすることができます。AIは学生の文法や言葉の間違いをチェックし、フィードバックを提供します。開発にはReact、TypeScript、Supabaseなどを使っています。私は特にフロントエンド開発とAI機能の連携に取り組んでいます。",
+        explanation: "Gaplar orasidagi to'xtalishlar o'rniga yordamchi yuklamalar (助詞: で、を、と) to'g'ri ulandi va texnologiyalar ro'yxati (React, TS, Supabase) aniq PREP formatiga keltirildi."
+      },
+      {
+        id: 3,
+        title: "3. Nega Yaponiya? (志望動機: なぜ日本か)",
+        question: "志望動機と申しますと、なぜ日本で働きたいと思われたのですか？",
+        badText: "私は、日本で働きたい。利用は、技術料。Coを高めたいからです。日本のIT企業では、チームワークや品質を大切にしていると考えています...",
+        goodText: "私は日本で働きたいです。理由は、技術力を高めたいからです。日本のIT企業は、チームワークや品質を大切にしていると考えています。これまでWeb開発やAIを使ったプロジェクトに参加してきました。日本で新しい技術や仕事の進め方を学び、エンジニアとして成長したいです。将来は、自分の経験を活かして会社に貢献したいと考えています。",
+        explanation: "«利用は技術料» / «Coを高めたい» kabi xato so'zlar o'rniga «理由は、技術力を高めたいからです» deb toza aytildi. HR nomzodning maqsadi texnik mahoratni o'stirish ekanini tushunadi."
+      },
+      {
+        id: 4,
+        title: "4. Nega aynan bizning kompaniya? (なぜ御社か)",
+        question: "貴社のどのようなところに魅力を感じて応募されたのか、もう少しお聞かせ願えますか？",
+        badText: "御社は、さまざまな開発プロジェクトに。多数。携われることに魅力を感じました... 貢献したいと思い覚えしました。",
+        goodText: "御社は、さまざまな開発プロジェクトに多数携われることに魅力を感じました。私はこれまで、Web開発やAIを使ったプロジェクトに取り組んできました。御社では、さまざまな技術や開発現場を経験できると考えています。また、チームで協力しながら自分の技術力を高めたいです。これまでの経験を活かし、御社に貢献したいと思い志望しました。",
+        explanation: "«思い覚えしました» degan noaniq ibora o'rniga rasmiy va qat'iy «貢献したいと思い志望しました» (hissa qo'shish istagida topshirdim) Keigo formasi ishlatildi."
+      },
+      {
+        id: 5,
+        title: "5. Eng katta qiyinchilik (困難を乗り越えた経験)",
+        question: "これまでの開発で一番難しかったことは何ですか？ また、その困難をどのように乗り越えましたか？",
+        badText: "一番難しかったのは？ AIと。音声会話で音が。遅くなる問題でした。解決するために。薬主観取ろう。取り組みました...",
+        goodText: "一番難しかったのは、AIと音声会話で音声が遅くなる問題でした。特にインターネットの接続が不安定な時に音声の遅延が発生しました。そこで、問題の原因を調べ、通信処理やエラー処理を見直しました。解決するために主体的に取り組みました。この経験から、諦めずに原因を調べることの大切さを学びました。",
+        explanation: "«音が遅くなる» o'rniga professional «音声の遅延が発生した» (audio kechikishi yuz berdi) va «主体的に取り組みました» (tashabbus bilan hal qildim) iboralari kiritildi."
+      },
+      {
+        id: 6,
+        title: "6. Karyera rejasi (キャリアプラン)",
+        question: "今後のキャリアプランについてどのようにお考えでしょうか？",
+        badText: "まずはエンジニアとして。実務経験、O to ME。技術力をたけみたいと考えています...",
+        goodText: "まずはエンジニアとして実務経験を積み、技術力を高めたいと考えています。特に、Web開発やAI技術についてもっと深く学びたいです。",
+        explanation: "«実務経験を積み» (amaliy tajriba orttirib) va «技術力を高めたい» (mahoratni oshirmoqchiman) orqali professional muhandislik rejalari aniq ko'rsatildi."
+      },
+      {
+        id: 7,
+        title: "7. Qaysi ko'nikmalarni oshirmoqchisiz? (スキル詳細)",
+        question: "具体的にWeb開発やAI技術では、どのような分野やスキルに力を入れたいですか？",
+        badText: "Web開発章。としても、設計のスキルをたけみたいです。特に、アップ設計やデータベースの知識を含めたい...",
+        goodText: "Web開発者としても、設計のスキルを高めたいです。特に、アプリ設計やデータベースの知識を深めたいと考えています。AI分野では、機械学習やAIを活用したサービス開発に興味があります。また、AIとウェブシステムを連携させる技術も学びたいで、将来はシステム全体を設計できるエンジニアを目指しています。",
+        explanation: "«Web開発者» va «アプリ設計やデータベースの知識を深めたい» shaklida sof arxitekturaviy terminologiyadan foydalanildi."
+      },
+      {
+        id: 8,
+        title: "8. Hozir qanday amaliyot qilyapsiz? (現在の学習)",
+        question: "その目標を達成するために、現在取り組んでいる具体的な学習方法やプロジェクトはありますか？",
+        badText: "はい。現在はシステム設計とバックインで開発を勉強しています。typescriptやあのスパベースを使いと...",
+        goodText: "はい。現在はシステム設計とバックエンド開発を勉強しています。特にAPIやデータベースサーバーの仕組みについて学んでいます。また、「会話ライフ」という日本語の学習サービスを開発しています。このプロジェクトでは、ReactやTypeScript、Supabaseを使い、APIとの連携にもっと取り組んでいます。学んだ知識を実際のプロジェクトで活かしています。",
+        explanation: "«バックイン» ➔ «バックエンド», «スパベース» ➔ «Supabase» deb to'g'irlandi va «学んだ知識を実務で活かす» xulosasi qo'shildi."
+      },
+      {
+        id: 9,
+        title: "9. Qaysi sohada ko'proq hissa qo'shasiz? (貢献分野)",
+        question: "具体的に、御社でどのような技術や分野に一番貢献したいとお考えですか？",
+        badText: "私は特にWebアプリケーション開発の分野で貢献したいと考えています。そのため、まずはフロンティアで開発で...",
+        goodText: "私は特にWebアプリケーション開発の分野で貢献したいと考えています。これまでReactやTypeScript、Next.jsを使って開発を経験してきました。そのため、まずはフロントエンド開発で自分の経験を活かしたいです。また、バックエンド開発やその他の技術にも興味があり、さらに勉強しています。将来は幅広い技術を身につけて、さまざまなプロジェクトに貢献できるエンジニアになりたいです。",
+        explanation: "«フロンティア» (chegara) so'zi xato, to'g'risi «フロントエンド開発» (frontend dasturlash) hisoblanadi."
+      },
+      {
+        id: 10,
+        title: "10. 3 Yildan so'ng kim bo'lmoqchisiz? (3年後のビジョン)",
+        question: "具体的に近い将来、どのようなキャリアプランをお考えでしょうか？",
+        badText: "入社後はチームでの開発経験を積み... もう三年後には、一人で開発業務を任せてもらえるエンジンニアになりたいです...",
+        goodText: "まずはWeb開発の経験を活かして、御社のプロジェクトに貢献したいです。入社後はチームでの開発経験を積み、日本の開発現場での仕事の進め方を学びたいです。また、バックエンド開発やデータベースの知識を深めたいと考えています。三年後には、一人で開発業務を任せてもらえるエンジニアになりたいです。将来的にはシステム設計にも携われるエンジニアを目指しています。",
+        explanation: "«一人で開発業務を任せてもらえる» (mustaqil topshiriq beriladigan) iborasi HR tomonidan eng yuqori baholanadigan ishonchli javobdir."
+      },
+      {
+        id: 11,
+        title: "11. Aloqa va jamoaviy uyg'unlik (コミュニケーション & 報連相)",
+        question: "日本の開発現場でのコミュニケーション能力向上について、具体的にどのような方法で取り組みたいとお考えですか？",
+        badText: "まずはチームのメンバーと積極的な。コミュニケーションをとりたいです。また、報告連絡、相談と相談を大切にしたいです...",
+        goodText: "まずはチームのメンバーと積極的にコミュニケーションをとりたいです。わからないことがあれば、自分で調べてから安心して質問したいと思います。また、報告連絡相談（報連相）を大切にしたいです。毎日日本語で仕事をし、日本語でコミュニケーション能力を高めたいです。将来はチームのメンバーと円滑に協力できるエンジニアになりたいです。",
+        explanation: "«報連相（ほうれんそう）を大切にする» va «円滑に協力できる» (muammosiz hamkorlik qila oladigan) yapon jamoaviy madaniyatining poydevori sanaladi."
+      },
+      {
+        id: 12,
+        title: "12. Tahlil va sabr-toqat darsi (分析力と忍耐力)",
+        question: "今までの開発経験で、特に困難だったこととそれをどのように乗り越えたか教えていただけますか？",
+        badText: "一番難しかったのは、会話ライブと。いう。AA on正解は昨日の開発です... この経験から問題オーディションに分析してね...",
+        goodText: "一番難しかったのは、会話ライブというAI音声認識の開発です。特にAIの音声が遅くなる問題があり、原因を一つずつ調べました。また、通信処理やエラー処理を見直し、何度もテストしました。この経験から問題の分析力と忍耐力の大切さを学びました。",
+        explanation: "Ovozli diktovka tufayli buzilgan so'zlar o'rniga «問題の分析力と忍耐力の大切さ» deb xulosa qilindi. Bu nomzodning ruhiy yetukligini ko'rsatadi."
+      }
+    ];
+
+    // RENDER FUNCTIONS
+    function renderWords(items) {
+      const container = document.getElementById('wordsContainer');
+      if (!items || items.length === 0) {
+        container.innerHTML = `<div style="grid-column: 1/-1; text-align: center; padding: 40px; color: var(--text-muted);">Mos keladigan so'z topilmadi.</div>`;
+        return;
+      }
+      container.innerHTML = items.map(w => `
+        <div class="word-card" data-search="${w.kanji} ${w.kana} ${w.uz} ${w.en}">
+          <div>
+            <div class="word-header">
+              <div>
+                <div class="kanji-text">${w.kanji}</div>
+                <div class="kana-text">${w.kana}</div>
+              </div>
+              <span class="word-num">#${w.num}</span>
+            </div>
+
+            <div class="word-trans">
+              <div class="uz-trans">🇺🇿 ${w.uz}</div>
+              <div class="en-trans">🇬🇧 ${w.en}</div>
+            </div>
+
+            <div class="word-example">
+              <strong>Suhbatdagi Misol:</strong>
+              <div class="jp">${w.exampleJp}</div>
+              <div class="uz">${w.exampleUz}</div>
+            </div>
+          </div>
+
+          <div class="word-actions">
+            <button class="btn-audio" onclick="speakJp('${w.kanji}。${w.exampleJp}')">
+              🔊 Tinglash
+            </button>
+            <button class="btn-copy" onclick="copyText('${w.kanji} (${w.kana}) — ${w.uz}')" title="Nusxalash">
+              📋
+            </button>
+          </div>
+        </div>
+      `).join('');
+    }
+
+    function renderCorrections(items) {
+      const container = document.getElementById('correctionsContainer');
+      if (!items || items.length === 0) {
+        container.innerHTML = `<div style="text-align: center; padding: 40px; color: var(--text-muted);">Mos keladigan namuna topilmadi.</div>`;
+        return;
+      }
+      container.innerHTML = items.map(c => `
+        <div class="corr-card" data-search="${c.title} ${c.question} ${c.goodText} ${c.badText} ${c.explanation}">
+          <div class="corr-header">
+            <div class="corr-question-badge">
+              <span class="q-pill">SAVOL</span>
+              <span>${c.question}</span>
+            </div>
+            <button class="btn-audio" style="flex:0 0 auto;" onclick="speakJp('${c.goodText.replace(/'/g, "\\'")}')">
+              🔊 To'g'ri Nutqni Tinglash
+            </button>
+          </div>
+
+          <div class="comparison-grid">
+            <div class="box-bad">
+              <div class="tag">❌ Nomzod Aytgan (Xato / Noaniq):</div>
+              <div class="quote-text">${c.badText}</div>
+            </div>
+            <div class="box-good">
+              <div class="tag">✅ Sensei Tuzatgan (Toza Yaponcha):</div>
+              <div class="quote-text">${c.goodText}</div>
+            </div>
+          </div>
+
+          <div class="sensei-explanation">
+            <strong>💡 Sensei Tahlili & HR Nuqtai Nazari:</strong>
+            ${c.explanation}
+          </div>
+        </div>
+      `).join('');
+    }
+
+    // AUDIO TTS
+    function speakJp(text) {
+      if (!('speechSynthesis' in window)) {
+        showToast("Brauzeringiz ovozli o'qishni qo'llab-quvvatlamaydi.");
+        return;
+      }
+      window.speechSynthesis.cancel();
+      const clean = text.replace(/<[^>]*>/g, '').replace(/[\n\r]+/g, ' ');
+      const utter = new SpeechSynthesisUtterance(clean);
+      utter.lang = 'ja-JP';
+      utter.rate = 0.95;
+      utter.pitch = 1.0;
+
+      const voices = window.speechSynthesis.getVoices();
+      const jpVoice = voices.find(v => v.lang.startsWith('ja') || v.lang.includes('JP'));
+      if (jpVoice) utter.voice = jpVoice;
+
+      window.speechSynthesis.speak(utter);
+      showToast("🔊 Yaponcha nutq o'qilmoqda...");
+    }
+
+    if ('speechSynthesis' in window) {
+      window.speechSynthesis.onvoiceschanged = () => { window.speechSynthesis.getVoices(); };
+    }
+
+    // TOAST & COPY
+    function showToast(msg) {
+      const toast = document.getElementById('toastMsg');
+      toast.innerText = msg;
+      toast.classList.add('show');
+      setTimeout(() => { toast.classList.remove('show'); }, 2500);
+    }
+
+    function copyText(str) {
+      navigator.clipboard.writeText(str).then(() => {
+        showToast("✅ Matn nusxalandi!");
+      }).catch(() => {
+        showToast("Nusxalashda xatolik yuz berdi");
+      });
+    }
+
+    // FILTER & SEARCH
+    document.getElementById('filterInput').addEventListener('input', function(e) {
+      const q = e.target.value.toLowerCase().trim();
+      if (!q) {
+        renderWords(WORDS);
+        renderCorrections(CORRECTIONS);
+        return;
+      }
+
+      const filteredWords = WORDS.filter(w => 
+        w.kanji.toLowerCase().includes(q) ||
+        w.kana.toLowerCase().includes(q) ||
+        w.uz.toLowerCase().includes(q) ||
+        w.en.toLowerCase().includes(q) ||
+        w.exampleJp.toLowerCase().includes(q)
+      );
+      renderWords(filteredWords);
+
+      const filteredCorrections = CORRECTIONS.filter(c =>
+        c.title.toLowerCase().includes(q) ||
+        c.question.toLowerCase().includes(q) ||
+        c.goodText.toLowerCase().includes(q) ||
+        c.explanation.toLowerCase().includes(q)
+      );
+      renderCorrections(filteredCorrections);
+    });
+
+    // SECTION TABS
+    function switchView(secId, btn) {
+      document.querySelectorAll('.tab-pill').forEach(p => p.classList.remove('active'));
+      btn.classList.add('active');
+
+      const sections = ['words-sec', 'corrections-sec', 'grammar-sec'];
+      if (secId === 'all') {
+        sections.forEach(s => document.getElementById(s).style.display = 'block');
+      } else {
+        sections.forEach(s => {
+          document.getElementById(s).style.display = (s === secId) ? 'block' : 'none';
+        });
+        const target = document.getElementById(secId);
+        if (target) {
+          target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+      }
+    }
+
+    // PWA REGISTRATION
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', () => {
+        navigator.serviceWorker.register('/sw.js', { scope: '/' })
+          .then(reg => console.log('SW Registered in grammar.html'))
+          .catch(err => console.error('SW Error:', err));
+      });
+    }
+
+    // INIT
+    renderWords(WORDS);
+    renderCorrections(CORRECTIONS);
+  </script>
+</body>
+</html>

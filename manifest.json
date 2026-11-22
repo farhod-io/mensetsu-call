@@ -47,6 +47,13 @@
   ],
   "shortcuts": [
     {
+      "name": "35 Lug'at & Grammatika",
+      "short_name": "Grammatika",
+      "description": "35 ta yangi atama va sensei xatolar tahlili",
+      "url": "/grammar.html",
+      "icons": [{ "src": "/icons/icon-192.png", "sizes": "192x192" }]
+    },
+    {
       "name": "Suhbat Trenajyori",
       "short_name": "Trenajyor",
       "description": "60 soniyalik interaktiv suhbat trenajyori",
