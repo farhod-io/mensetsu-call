@@ -578,6 +578,237 @@
       font-size: 12px;
     }
 
+    /* 4 In-Depth Interview Modules */
+    .modules-list {
+      display: flex;
+      flex-direction: column;
+      gap: 28px;
+    }
+    .module-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--card-radius);
+      padding: 24px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.25);
+      border-top: 4px solid var(--primary);
+      transition: border-color 0.2s, transform 0.2s;
+    }
+    .module-card:hover {
+      border-color: var(--primary);
+    }
+    .module-top-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(56, 189, 248, 0.12);
+      border: 1px solid rgba(56, 189, 248, 0.3);
+      color: #38bdf8;
+      font-size: 12px;
+      font-weight: 800;
+      padding: 4px 12px;
+      border-radius: 9999px;
+      margin-bottom: 14px;
+    }
+    .module-q-title {
+      font-family: var(--font-jp);
+      font-size: 19px;
+      font-weight: 800;
+      color: #f0f6fc;
+      line-height: 1.5;
+      margin-bottom: 8px;
+    }
+    .module-q-trans {
+      font-size: 14px;
+      color: var(--text-sub);
+      margin-bottom: 12px;
+      line-height: 1.6;
+    }
+    .module-hr-intent {
+      background: rgba(245, 158, 11, 0.1);
+      border: 1px solid rgba(245, 158, 11, 0.3);
+      border-radius: 10px;
+      padding: 12px 16px;
+      color: #fde68a;
+      font-size: 13.5px;
+      margin-bottom: 20px;
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+    }
+    .module-subgrid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+      margin-bottom: 20px;
+    }
+    @media (max-width: 768px) {
+      .module-subgrid { grid-template-columns: 1fr; }
+    }
+    .kanji-box, .grammar-subbox {
+      background: var(--surface-card);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 16px;
+    }
+    .subbox-title {
+      font-size: 14px;
+      font-weight: 800;
+      color: #58a6ff;
+      margin-bottom: 12px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .kanji-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 13px;
+    }
+    .kanji-table th {
+      text-align: left;
+      padding: 6px 8px;
+      color: var(--text-muted);
+      border-bottom: 1px solid var(--border);
+      font-size: 11.5px;
+    }
+    .kanji-table td {
+      padding: 8px;
+      border-bottom: 1px solid rgba(48, 54, 61, 0.5);
+    }
+    .kanji-table td.kj {
+      font-family: var(--font-jp);
+      font-size: 15px;
+      font-weight: 700;
+      color: #fff;
+    }
+    .kanji-table td.kn {
+      font-family: var(--font-jp);
+      color: #38bdf8;
+      font-size: 12px;
+    }
+    .grammar-item {
+      margin-bottom: 10px;
+      padding-bottom: 10px;
+      border-bottom: 1px dashed rgba(48, 54, 61, 0.7);
+      font-size: 13px;
+    }
+    .grammar-item:last-child {
+      margin-bottom: 0;
+      padding-bottom: 0;
+      border-bottom: none;
+    }
+    .grammar-item strong {
+      color: #67e8f9;
+      font-family: 'Fira Code', monospace;
+    }
+
+    /* 5-Sentence Model Answer */
+    .five-sentence-box {
+      background: rgba(22, 27, 34, 0.9);
+      border: 1px solid rgba(56, 139, 253, 0.35);
+      border-radius: 14px;
+      padding: 18px;
+      margin-bottom: 20px;
+    }
+    .five-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 14px;
+      padding-bottom: 10px;
+      border-bottom: 1px solid var(--border);
+    }
+    .five-title {
+      font-size: 15px;
+      font-weight: 800;
+      color: #38bdf8;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .sentence-row {
+      display: flex;
+      gap: 12px;
+      margin-bottom: 14px;
+      padding-bottom: 14px;
+      border-bottom: 1px solid rgba(48, 54, 61, 0.4);
+    }
+    .sentence-row:last-child {
+      margin-bottom: 0;
+      padding-bottom: 0;
+      border-bottom: none;
+    }
+    .sentence-num {
+      width: 24px;
+      height: 24px;
+      border-radius: 50%;
+      background: rgba(56, 189, 248, 0.15);
+      color: #38bdf8;
+      font-weight: 800;
+      font-size: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+    .sentence-content {
+      flex: 1;
+    }
+    .sentence-jp {
+      font-family: var(--font-jp);
+      font-size: 14.5px;
+      font-weight: 700;
+      color: #f0f6fc;
+      line-height: 1.5;
+    }
+    .sentence-romaji {
+      font-size: 12px;
+      color: #7dd3fc;
+      margin: 2px 0 4px;
+      font-family: 'Fira Code', monospace;
+    }
+    .sentence-uz {
+      font-size: 12.5px;
+      color: var(--text-sub);
+    }
+
+    /* Golden Advice Callout */
+    .golden-box {
+      background: linear-gradient(135deg, rgba(30, 58, 138, 0.3), rgba(2, 132, 199, 0.15));
+      border: 1px solid rgba(56, 189, 248, 0.4);
+      border-radius: 12px;
+      padding: 16px 20px;
+    }
+    .golden-head {
+      font-size: 13px;
+      font-weight: 800;
+      color: #38bdf8;
+      margin-bottom: 8px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .golden-quote {
+      font-family: var(--font-jp);
+      font-size: 16px;
+      font-weight: 800;
+      color: #ffffff;
+      background: rgba(13, 17, 23, 0.7);
+      padding: 12px 16px;
+      border-radius: 8px;
+      border-left: 4px solid #38bdf8;
+      margin: 8px 0;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+    }
+    .golden-quote-trans {
+      font-size: 13px;
+      color: #94a3b8;
+      font-style: italic;
+    }
+
     /* Toast */
     .toast {
       position: fixed;
@@ -642,8 +873,12 @@
 
       <div class="stats-row">
         <div class="stat-card">
+          <div class="stat-val">4 Modul</div>
+          <div class="stat-lab">CAL chuqur tahliliy modullari (PREP)</div>
+        </div>
+        <div class="stat-card">
           <div class="stat-val">35 Ta</div>
-          <div class="stat-lab">Suhbatda to'plangan yangi so'zlar</div>
+          <div class="stat-lab">Suhbatda to'plangan yangi atamalar</div>
         </div>
         <div class="stat-card">
           <div class="stat-val">12 Ta</div>
@@ -652,10 +887,6 @@
         <div class="stat-card">
           <div class="stat-val">10+ Qolip</div>
           <div class="stat-lab">Intervyu uchun N2/N1 Keigo grammatikasi</div>
-        </div>
-        <div class="stat-card">
-          <div class="stat-val">100% Oflayn</div>
-          <div class="stat-lab">PWA audio talaffuz va kesh</div>
         </div>
       </div>
     </div>
@@ -671,6 +902,7 @@
 
       <div class="tab-pills">
         <button class="tab-pill active" onclick="switchView('all', this)">Barchasi</button>
+        <button class="tab-pill" onclick="switchView('modules-sec', this)">🎯 4 Chuqur Modul (CAL Focus)</button>
         <button class="tab-pill" onclick="switchView('words-sec', this)">💎 35 Yangi So'zlar</button>
         <button class="tab-pill" onclick="switchView('corrections-sec', this)">⚠️ Sensei Tahlili (12 Savol)</button>
         <button class="tab-pill" onclick="switchView('grammar-sec', this)">📝 Intervyu Grammatikasi</button>
@@ -679,6 +911,523 @@
   </div>
 
   <main class="container">
+
+    <!-- ==========================================
+         SECTION 0: 4 TA CHUQUR INTERVYU MODULI (YUKI SENSEI METODIKASI)
+         ========================================== -->
+    <section id="modules-sec" class="content-section">
+      <div class="section-head">
+        <h2>
+          <span>🎯 4 Ta Chuqur Intervyu Modullari (Yuki Sensei Metodikasi)</span>
+        </h2>
+        <span class="section-count">PREP & 5-Gaplik Qolip</span>
+      </div>
+
+      <div class="modules-list">
+
+        <!-- MODULE 1 -->
+        <div class="module-card">
+          <div class="module-top-badge">🎯 1-MODUL • KARYERA & TEXNIK KO'NIKMALAR</div>
+          <div class="module-q-title">
+            「具体的なキャリアプランをありがとうございます。日本の開発現場での経験を積む中で、特にどのようなスキルを重点的に伸ばしたいと考えていますか？」
+          </div>
+          <div class="module-q-trans">
+            🇺🇿 <strong>Tarjima:</strong> Aniq karyera rejalaringizni tushuntirganingiz uchun rahmat. Yaponiyadagi dasturlash muhitida tajriba orttirish davomida ayniqsa qaysi ko‘nikmalaringizni rivojlantirishga ko‘proq e'tibor qaratmoqchisiz?
+          </div>
+          <div class="module-hr-intent">
+            <span style="font-size: 20px;">🕵️‍♂️</span>
+            <div>
+              <strong>HR nimani bilmoqchi?</strong><br>
+              Yaponiyada ishlash orqali nomzod aynan qanday texnik va kasbiy ko‘nikmalarni kuchaytirmoqchi? Faqat nazariya emas, aniq maqsad bormi?
+            </div>
+          </div>
+
+          <div class="module-subgrid">
+            <div class="kanji-box">
+              <div class="subbox-title">🈶 1. Muhim Kanjilar</div>
+              <table class="kanji-table">
+                <thead>
+                  <tr><th>Kanji</th><th>O‘qilishi</th><th>Ma’nosi</th></tr>
+                </thead>
+                <tbody>
+                  <tr><td class="kj">開発現場</td><td class="kn">かいはつげんば</td><td>Dasturlash ish muhiti</td></tr>
+                  <tr><td class="kj">経験を積む</td><td class="kn">けいけんをつむ</td><td>Tajriba orttirmoq</td></tr>
+                  <tr><td class="kj">特に</td><td class="kn">とくに</td><td>Ayniqsa</td></tr>
+                  <tr><td class="kj">重点的に</td><td class="kn">じゅうてんてきに</td><td>Asosiy e'tibor qaratib</td></tr>
+                  <tr><td class="kj">伸ばす</td><td class="kn">のばす</td><td>Rivojlantirmoq</td></tr>
+                  <tr><td class="kj">技術力</td><td class="kn">ぎじゅつりょく</td><td>Texnik salohiyat</td></tr>
+                  <tr><td class="kj">設計</td><td class="kn">せっけい</td><td>Loyihalash</td></tr>
+                </tbody>
+              </table>
+            </div>
+
+            <div class="grammar-subbox">
+              <div class="subbox-title">💡 2. Grammatika Qoliplari</div>
+              <div class="grammar-item">
+                <strong>〜中で（なかで）</strong><br>
+                <span>... jarayonida, ... davomida (masalan: 開発現場での経験を積む中で).</span>
+              </div>
+              <div class="grammar-item">
+                <strong>〜を重点的に伸ばしたい</strong><br>
+                <span>...ni ustuvor / asosiy e'tibor bilan rivojlantirmoqchiman.</span>
+              </div>
+              <div class="grammar-item">
+                <strong>〜と考えています</strong><br>
+                <span>...deb rejalashtiryapman / o‘ylayman (HR oldida muloyim qat'iyat).</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- 5-Sentence Answer -->
+          <div class="five-sentence-box">
+            <div class="five-header">
+              <div class="five-title">
+                <span>🗣️ CAL Uchun 5 Gaplik Namunaviy Javob</span>
+              </div>
+              <button class="btn-audio" onclick="speakJp('特に、バックエンド開発とシステム設計のスキルを伸ばしたいです。これまでフロントエンド開発を中心に経験を積んできました。今後はAPI設計やデータベースについて、もっと深く学びたいと考えています。また、日本の開発現場でチーム開発やコミュニケーション能力も高めたいです。将来は、システム全体を理解し、設計から開発まで対応できるエンジニアになりたいです。')">
+                🔊 Butun Javobni Tinglash
+              </button>
+            </div>
+
+            <div class="sentence-row">
+              <div class="sentence-num">1</div>
+              <div class="sentence-content">
+                <div class="sentence-jp">特に、バックエンド開発とシステム設計のスキルを伸ばしたいです。</div>
+                <div class="sentence-romaji">Toku ni, bakkuendo kaihatsu to shisutemu sekkei no sukiru o nobashitai desu.</div>
+                <div class="sentence-uz">Ayniqsa backend dasturlash va tizim loyihalash (System Design) ko‘nikmalarimni rivojlantirmoqchiman.</div>
+              </div>
+            </div>
+
+            <div class="sentence-row">
+              <div class="sentence-num">2</div>
+              <div class="sentence-content">
+                <div class="sentence-jp">これまでフロントエンド開発を中心に経験を積んできました。</div>
+                <div class="sentence-romaji">Kore made furontoendo kaihatsu o chūshin ni keiken o tsunde kimashita.</div>
+                <div class="sentence-uz">Hozirgacha asosan frontend yo‘nalishida tajriba orttirib keldim.</div>
+              </div>
+            </div>
+
+            <div class="sentence-row">
+              <div class="sentence-num">3</div>
+              <div class="sentence-content">
+                <div class="sentence-jp">今後はAPI設計やデータベースについて、もっと深く学びたいと考えています。</div>
+                <div class="sentence-romaji">Kongo wa API sekkei ya dētabēsu ni tsuite, motto fukaku manabitai to kangaete imasu.</div>
+                <div class="sentence-uz">Kelgusida API loyihalash va ma'lumotlar bazasi haqida yanada chuqurroq o‘rganish niyatidaman.</div>
+              </div>
+            </div>
+
+            <div class="sentence-row">
+              <div class="sentence-num">4</div>
+              <div class="sentence-content">
+                <div class="sentence-jp">また、日本の開発現場でチーム開発やコミュニケーション能力も高めたいです。</div>
+                <div class="sentence-romaji">Mata, Nihon no kaihatsu genba de chīmu kaihatsu ya komyunikēshon nōryoku mo takametai desu.</div>
+                <div class="sentence-uz">Shuningdek, Yaponiya dasturlash maydonida jamoaviy ishlash va muloqot qobiliyatimni ham yuksaltirmoqchiman.</div>
+              </div>
+            </div>
+
+            <div class="sentence-row">
+              <div class="sentence-num">5</div>
+              <div class="sentence-content">
+                <div class="sentence-jp">将来は、システム全体を理解し、設計から開発まで対応できるエンジニアになりたいです。</div>
+                <div class="sentence-romaji">Shōrai wa, shisutemu zentai o rikai shi, sekkei kara kaihatsu made taiō dekiru enjinia ni naritai desu.</div>
+                <div class="sentence-uz">Kelajakda butun tizimni to'liq tushunadigan, arxitekturadan tortib dasturlashgacha eplay oladigan muhandis bo‘lishni maqsad qilganman.</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="golden-box">
+            <div class="golden-head">🎯 HR UCHUN MASLAHAT & YODLASH UCHUN OLTIN JUMLA:</div>
+            <p style="font-size:13px; color:var(--text-sub); margin-bottom:6px;">
+              CAL suhbatida texnik ko‘nikmalar bilan birga <strong>チーム開発（jamoaviy dasturlash）</strong> va <strong>コミュニケーション能力（muloqot qobiliyati）</strong> haqida aytish o'ta muhim.
+            </p>
+            <div class="golden-quote">
+              <span>「技術力だけでなく、コミュニケーション能力も高めたいです。」</span>
+              <button class="btn-copy" onclick="copyText('技術力だけでなく、コミュニケーション能力も高めたいです。')">📋 Nusxa</button>
+            </div>
+            <div class="golden-quote-trans">Gijutsuryoku dake de naku, komyunikēshon nōryoku mo takametai desu. (Faqat texnik bilimlarimni emas, muloqot qobiliyatimni ham rivojlantirmoqchiman.)</div>
+          </div>
+        </div>
+
+        <!-- MODULE 2 -->
+        <div class="module-card">
+          <div class="module-top-badge">🎯 2-MODUL • MULOQOT & 報連相 (HOU-REN-SO)</div>
+          <div class="module-q-title">
+            「バックエンド開発とAPI設計に注力したいとのこと、よくわかりました。日本の開発現場でのコミュニケーション能力向上について、具体的にどのような方法で取り組みたいとお考えですか？」
+          </div>
+          <div class="module-q-trans">
+            🇺🇿 <strong>Tarjima:</strong> Backend dasturlash va API loyihalashga ko‘proq e'tibor qaratmoqchi ekaningizni yaxshi tushundim. Yaponiyadagi dasturlash muhitida muloqot qobiliyatingizni yaxshilash uchun aynan qanday usullardan foydalanmoqchisiz?
+          </div>
+          <div class="module-hr-intent">
+            <span style="font-size: 20px;">🕵️‍♂️</span>
+            <div>
+              <strong>HR nimani bilmoqchi?</strong><br>
+              Yaponiyalik hamkasblaringiz bilan qanday muloqot qilasiz, tushunmagan narsalaringizni qanday so‘raysiz va jamoaga qanday moslashasiz?
+            </div>
+          </div>
+
+          <div class="module-subgrid">
+            <div class="kanji-box">
+              <div class="subbox-title">🈶 1. Muhim Kanjilar</div>
+              <table class="kanji-table">
+                <thead>
+                  <tr><th>Kanji</th><th>O‘qilishi</th><th>Ma’nosi</th></tr>
+                </thead>
+                <tbody>
+                  <tr><td class="kj">注力</td><td class="kn">ちゅうりょく</td><td>Asosiy e'tibor qaratish</td></tr>
+                  <tr><td class="kj">開発現場</td><td class="kn">かいはつげんば</td><td>Dasturlash ish muhiti</td></tr>
+                  <tr><td class="kj">能力</td><td class="kn">のうりょく</td><td>Qobiliyat, malaka</td></tr>
+                  <tr><td class="kj">向上</td><td class="kn">こうじょう</td><td>Yaxshilanish, o'sish</td></tr>
+                  <tr><td class="kj">具体的</td><td class="kn">ぐたいてき</td><td>Aniq, batafsil</td></tr>
+                  <tr><td class="kj">方法</td><td class="kn">ほうほう</td><td>Usul, metodika</td></tr>
+                  <tr><td class="kj">取り組む</td><td class="kn">とりくむ</td><td>Faol shug‘ullanmoq</td></tr>
+                </tbody>
+              </table>
+            </div>
+
+            <div class="grammar-subbox">
+              <div class="subbox-title">💡 2. Grammatika Qoliplari</div>
+              <div class="grammar-item">
+                <strong>〜に注力したい</strong><br>
+                <span>...ga asosiy e'tiborimni / bor kuchimni qaratmoqchiman.</span>
+              </div>
+              <div class="grammar-item">
+                <strong>〜について</strong><br>
+                <span>... haqida (masalan: コミュニケーション能力向上について).</span>
+              </div>
+              <div class="grammar-item">
+                <strong>どのような方法で</strong><br>
+                <span>Qanday usul / metod bilan?</span>
+              </div>
+              <div class="grammar-item">
+                <strong>〜に取り組みたい</strong><br>
+                <span>... ustida faol ish olib bormoqchiman.</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- 5-Sentence Answer -->
+          <div class="five-sentence-box">
+            <div class="five-header">
+              <div class="five-title">
+                <span>🗣️ CAL Uchun 5 Gaplik Namunaviy Javob</span>
+              </div>
+              <button class="btn-audio" onclick="speakJp('まずは、チームのメンバーと積極的にコミュニケーションを取りたいです。わからないことがあれば、自分で調べてから先輩に質問したいと思います。また、報告・連絡・相談を大切にしたいです。毎日の仕事を通して、日本語でのコミュニケーション能力を高めたいです。将来は、チームのメンバーと円滑に協力できるエンジニアになりたいです。')">
+                🔊 Butun Javobni Tinglash
+              </button>
+            </div>
+
+            <div class="sentence-row">
+              <div class="sentence-num">1</div>
+              <div class="sentence-content">
+                <div class="sentence-jp">まずは、チームのメンバーと積極的にコミュニケーションを取りたいです。</div>
+                <div class="sentence-romaji">Mazu wa, chīmu no menbā to sekkyokuteki ni komyunikēshon o toritai desu.</div>
+                <div class="sentence-uz">Avvalo, jamoa a'zolari bilan faol muloqotda bo'lishni xohlayman.</div>
+              </div>
+            </div>
+
+            <div class="sentence-row">
+              <div class="sentence-num">2</div>
+              <div class="sentence-content">
+                <div class="sentence-jp">わからないことがあれば、自分で調べてから先輩に質問したいと思います。</div>
+                <div class="sentence-romaji">Wakaranai koto ga areba, jibun de shirabete kara senpai ni shitsumon shitai to omoimasu.</div>
+                <div class="sentence-uz">Tushunmagan narsam bo‘lsa, dastlab o‘zim o‘rganib, keyin tajribali hamkasblardan so‘rayman.</div>
+              </div>
+            </div>
+
+            <div class="sentence-row">
+              <div class="sentence-num">3</div>
+              <div class="sentence-content">
+                <div class="sentence-jp">また、報告・連絡・相談を大切にしたいです。</div>
+                <div class="sentence-romaji">Mata, hōkoku, renraku, sōdan o taisetsu ni shitai desu.</div>
+                <div class="sentence-uz">Shuningdek, hisobot berish, xabar qilish va maslahatlashish (Hō-Ren-Sō) tamoyilini qat'iy saqlayman.</div>
+              </div>
+            </div>
+
+            <div class="sentence-row">
+              <div class="sentence-num">4</div>
+              <div class="sentence-content">
+                <div class="sentence-jp">毎日の仕事を通して、日本語でのコミュニケーション能力を高めたいです。</div>
+                <div class="sentence-romaji">Mainichi no shigoto o tōshite, Nihongo de no komyunikēshon nōryoku o takametai desu.</div>
+                <div class="sentence-uz">Kundalik amaliy ishlar orqali yapon tilidagi muloqot mahoratimni oshirmoqchiman.</div>
+              </div>
+            </div>
+
+            <div class="sentence-row">
+              <div class="sentence-num">5</div>
+              <div class="sentence-content">
+                <div class="sentence-jp">将来は、チームのメンバーと円滑に協力できるエンジニアになりたいです。</div>
+                <div class="sentence-romaji">Shōrai wa, chīmu no menbā to enkatsu ni kyōryoku dekiru enjinia ni naritai desu.</div>
+                <div class="sentence-uz">Kelajakda jamoa bilan silliq va samarali hamkorlik qila oladigan muhandis bo‘lish niyatidaman.</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="golden-box">
+            <div class="golden-head">🎯 CAL SUHBATIDA ENG MUHIM TUSHUNCHA: 報連相（ほうれんそう）</div>
+            <p style="font-size:13px; color:var(--text-sub); margin-bottom:6px;">
+              <strong>報告（Hōkoku）</strong> — Hisobot berish • <strong>連絡（Renraku）</strong> — Xabar berish • <strong>相談（Sōdan）</strong> — Maslahatlashish.
+            </p>
+            <div class="golden-quote">
+              <span>「報告・連絡・相談を大切にしたいです。」</span>
+              <button class="btn-copy" onclick="copyText('報告・連絡・相談を大切にしたいです。')">📋 Nusxa</button>
+            </div>
+            <div class="golden-quote-trans">Hōkoku, renraku, sōdan o taisetsu ni shitai desu. (Hisobot, aloqa va maslahatlashuvni muhim qadriyat deb bilaman.)</div>
+          </div>
+        </div>
+
+        <!-- MODULE 3 -->
+        <div class="module-card">
+          <div class="module-top-badge">🎯 3-MODUL • ENG KATTA QIYINCHILIK (KAIWA.LIVE LOYIHASI)</div>
+          <div class="module-q-title">
+            「積極的にコミュニケーションをとる姿勢は素晴らしいですね。報告連絡相談を大切にすることは、仕事の円滑な進行に大いに役立ちます。今までの開発経験で、特に困難だったこととそれをどのように乗り越えたか教えていただけますか？」
+          </div>
+          <div class="module-q-trans">
+            🇺🇿 <strong>Tarjima:</strong> Faol muloqot qilish yondashuvingiz juda yaxshi. Hō-Ren-Sō qoidalariga rioya qilish ishlarning muammosiz davom etishiga katta yordam beradi. Hozirgacha dasturlash tajribangizda eng qiyin bo‘lgan muammo nima edi va uni qanday yengib o‘tdingiz?
+          </div>
+          <div class="module-hr-intent">
+            <span style="font-size: 20px;">🕵️‍♂️</span>
+            <div>
+              <strong>HR nimani tekshiryapti?</strong><br>
+              Muammoni aniqlash, mustaqil fikrlash, tahliliy yondashuv (loglar tekshiruvi), yechim topish va tajribadan to'g'ri xulosa chiqarish qobiliyatingizni.
+            </div>
+          </div>
+
+          <div class="module-subgrid">
+            <div class="kanji-box">
+              <div class="subbox-title">🈶 1. Muhim Kanjilar</div>
+              <table class="kanji-table">
+                <thead>
+                  <tr><th>Kanji</th><th>O‘qilishi</th><th>Ma’nosi</th></tr>
+                </thead>
+                <tbody>
+                  <tr><td class="kj">積極的</td><td class="kn">せっきょくてき</td><td>Faol, tashabbuskor</td></tr>
+                  <tr><td class="kj">姿勢</td><td class="kn">しせい</td><td>Yondashuv, ruhiy holat</td></tr>
+                  <tr><td class="kj">円滑</td><td class="kn">えんかつ</td><td>Ravon, muammosiz</td></tr>
+                  <tr><td class="kj">進行</td><td class="kn">しんこう</td><td>Jarayon davomiyligi</td></tr>
+                  <tr><td class="kj">大いに</td><td class="kn">おおいに</td><td>Katta darajada</td></tr>
+                  <tr><td class="kj">困難</td><td class="kn">こんなん</td><td>Qiyinchilik, to'siq</td></tr>
+                  <tr><td class="kj">乗り越える</td><td class="kn">のりこえる</td><td>Yengib o'tmoq</td></tr>
+                </tbody>
+              </table>
+            </div>
+
+            <div class="grammar-subbox">
+              <div class="subbox-title">💡 2. Grammatika Qoliplari</div>
+              <div class="grammar-item">
+                <strong>〜に役立つ（やくだつ）</strong><br>
+                <span>...ga foyda keltirmoq, asqotmoq.</span>
+              </div>
+              <div class="grammar-item">
+                <strong>〜だったこと</strong><br>
+                <span>...bo‘lgan holat (masalan: 一番困難だったこと).</span>
+              </div>
+              <div class="grammar-item">
+                <strong>どのように乗り越えたか</strong><br>
+                <span>Qanday qilib yengib o‘tganlik usuli.</span>
+              </div>
+              <div class="grammar-item">
+                <strong>〜教えていただけますか</strong><br>
+                <span>Aytib bera olasizmi? (O'ta hurmatli Kenjougo so'rov).</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- 5-Sentence Answer -->
+          <div class="five-sentence-box">
+            <div class="five-header">
+              <div class="five-title">
+                <span>🗣️ CAL Uchun 5 Gaplik Namunaviy Javob (Kaiwa.live)</span>
+              </div>
+              <button class="btn-audio" onclick="speakJp('一番難しかったのは、Kaiwa.liveのAI音声会話機能の開発です。特に、AIの応答が遅くなる問題がありました。そこで、ログを確認し、問題の原因を一つずつ調べました。また、通信処理やエラー処理を見直し、何度もテストしました。この経験から、問題を冷静に分析し、改善を続けることの大切さを学びました。')">
+                🔊 Butun Javobni Tinglash
+              </button>
+            </div>
+
+            <div class="sentence-row">
+              <div class="sentence-num">1</div>
+              <div class="sentence-content">
+                <div class="sentence-jp">一番難しかったのは、Kaiwa.liveのAI音声会話機能の開発です。</div>
+                <div class="sentence-romaji">Ichiban muzukashikatta no wa, Kaiwa.live no AI onsei kaiwa kinō no kaihatsu desu.</div>
+                <div class="sentence-uz">Eng qiyin vazifa — Kaiwa.live loyihasining AI ovozli muloqot funksiyasini ishlab chiqish edi.</div>
+              </div>
+            </div>
+
+            <div class="sentence-row">
+              <div class="sentence-num">2</div>
+              <div class="sentence-content">
+                <div class="sentence-jp">特に、AIの応答が遅くなる問題がありました。</div>
+                <div class="sentence-romaji">Toku ni, AI no ōtō ga osoku naru mondai ga arimashita.</div>
+                <div class="sentence-uz">Ayniqsa, AI javob berishida ovoz kechikishi (latensiya) muammosi yuzaga keldi.</div>
+              </div>
+            </div>
+
+            <div class="sentence-row">
+              <div class="sentence-num">3</div>
+              <div class="sentence-content">
+                <div class="sentence-jp">そこで、ログを確認し、問題の原因を一つずつ調べました。</div>
+                <div class="sentence-romaji">Soko de, rogu o kakunin shi, mondai no gen'in o hitotsu zutsu shirabemashita.</div>
+                <div class="sentence-uz">Shuning uchun loglarni tekshirib, muammo sabablarini birma-bir o'rgandim.</div>
+              </div>
+            </div>
+
+            <div class="sentence-row">
+              <div class="sentence-num">4</div>
+              <div class="sentence-content">
+                <div class="sentence-jp">また、通信処理やエラー処理を見直し、何度もテストしました。</div>
+                <div class="sentence-romaji">Mata, tsūshin shori ya erā shori o minaoshi, nando mo tesuto shimashita.</div>
+                <div class="sentence-uz">Aloqa protokollari va xatoliklarni qayta ishlashni ko'rib chiqib, qayta-qayta test qildim.</div>
+              </div>
+            </div>
+
+            <div class="sentence-row">
+              <div class="sentence-num">5</div>
+              <div class="sentence-content">
+                <div class="sentence-jp">この経験から、問題を冷静に分析し、改善を続けることの大切さを学びました。</div>
+                <div class="sentence-romaji">Kono keiken kara, mondai o reisei ni bunseki shi, kaizen o tsuzukeru koto no taisetsusa o manabimashita.</div>
+                <div class="sentence-uz">Bu tajriba orqali muammolarni sovuqqonlik bilan tahlil qilish va takomillashtirishni davom ettirish muhimligini angladim.</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="golden-box">
+            <div class="golden-head">🎯 HR UCHUN ENG MUHIM TAHLILIY IBORA:</div>
+            <p style="font-size:13px; color:var(--text-sub); margin-bottom:6px;">
+              HR faqat muammoni emas, <strong>どのように乗り越えたか（qanday yengib o'tganingizni）</strong> tekshiradi. Harakatlaringiz ketma-ketligi qadrli.
+            </p>
+            <div class="golden-quote">
+              <span>「問題の原因を一つずつ調べ、解決方法を考えました。」</span>
+              <button class="btn-copy" onclick="copyText('問題の原因を一つずつ調べ、解決方法を考えました。')">📋 Nusxa</button>
+            </div>
+            <div class="golden-quote-trans">Mondai no gen'in o hitotsu zutsu shirabe, kaiketsu hōhō o kangaemashita. (Muammoning sabablarini birma-bir tekshirib, yechim usulini o‘yladim.)</div>
+          </div>
+        </div>
+
+        <!-- MODULE 4 -->
+        <div class="module-card">
+          <div class="module-top-badge">🎯 4-MODUL • KARYERA ISTIQBOLI & TECH LEAD</div>
+          <div class="module-q-title">
+            「難しい問題に粘り強く取り組まれたご経験、非常に素晴らしいですね。今後のキャリアプランとして、具体的にどのような技術や役割を目指しておりますか？」
+          </div>
+          <div class="module-q-trans">
+            🇺🇿 <strong>Tarjima:</strong> Qiyin muammolarni sabr va qat'iyat bilan hal qilishga harakat qilgan tajribangiz juda ajoyib. Kelajakdagi karyera rejangizda aniq qaysi texnologiyalarni o‘zlashtirishni va qanday lavozim yoki rolga erishishni maqsad qilgansiz?
+          </div>
+          <div class="module-hr-intent">
+            <span style="font-size: 20px;">🕵️‍♂️</span>
+            <div>
+              <strong>HR nimani bilmoqchi?</strong><br>
+              Kelajakda faqat oddiy dasturchi bo‘lib qolmoqchimisiz yoki System Design, texnik yetakchilik (Tech Lead / Architect) kabi mas'uliyatli rollarga ham intilasizmi?
+            </div>
+          </div>
+
+          <div class="module-subgrid">
+            <div class="kanji-box">
+              <div class="subbox-title">🈶 1. Muhim Kanjilar</div>
+              <table class="kanji-table">
+                <thead>
+                  <tr><th>Kanji</th><th>O‘qilishi</th><th>Ma’nosi</th></tr>
+                </thead>
+                <tbody>
+                  <tr><td class="kj">粘り強い</td><td class="kn">ねばりづよい</td><td>Qat'iyatli, taslim bo‘lmas</td></tr>
+                  <tr><td class="kj">取り組む</td><td class="kn">とりくむ</td><td>Jiddiy shug‘ullanmoq</td></tr>
+                  <tr><td class="kj">経験</td><td class="kn">けいけん</td><td>Tajriba</td></tr>
+                  <tr><td class="kj">今後</td><td class="kn">こんご</td><td>Kelgusida, kelajakda</td></tr>
+                  <tr><td class="kj">具体的</td><td class="kn">ぐたいてき</td><td>Aniq, muayyan</td></tr>
+                  <tr><td class="kj">技術</td><td class="kn">ぎじゅつ</td><td>Texnologiya, mahorat</td></tr>
+                  <tr><td class="kj">役割</td><td class="kn">やくわり</td><td>Rol, mas'uliyat, lavozim</td></tr>
+                  <tr><td class="kj">目指す</td><td class="kn">めざす</td><td>Maqsad qilmoq</td></tr>
+                </tbody>
+              </table>
+            </div>
+
+            <div class="grammar-subbox">
+              <div class="subbox-title">💡 2. Grammatika Qoliplari</div>
+              <div class="grammar-item">
+                <strong>粘り強く取り組む</strong><br>
+                <span>Sabr-toqat va qat'iyat bilan oxirigacha intilmoq.</span>
+              </div>
+              <div class="grammar-item">
+                <strong>〜として</strong><br>
+                <span>... sifatida (masalan: キャリアプランとして).</span>
+              </div>
+              <div class="grammar-item">
+                <strong>〜を目指しています</strong><br>
+                <span>... bo‘lishni maqsad qilganman / intilyapman.</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- 5-Sentence Answer -->
+          <div class="five-sentence-box">
+            <div class="five-header">
+              <div class="five-title">
+                <span>🗣️ CAL Uchun 5 Gaplik Namunaviy Javob (Tech Lead)</span>
+              </div>
+              <button class="btn-audio" onclick="speakJp('まずは、Web開発の経験を生かして、御社のプロジェクトに貢献したいです。特に、バックエンド開発やAPI設計、データベースの知識を深めたいと考えています。また、システム設計やAI技術についても学び続けたいです。3年後には、設計から開発まで幅広く対応できるエンジニアになりたいです。将来は、チームの技術的な課題を解決できるテックリードを目指しています。')">
+                🔊 Butun Javobni Tinglash
+              </button>
+            </div>
+
+            <div class="sentence-row">
+              <div class="sentence-num">1</div>
+              <div class="sentence-content">
+                <div class="sentence-jp">まずは、Web開発の経験を生かして、御社のプロジェクトに貢献したいです。</div>
+                <div class="sentence-romaji">Mazu wa, Web kaihatsu no keiken o ikashite, onsha no purojekuto ni kōken shitai desu.</div>
+                <div class="sentence-uz">Avvalo Web dasturlash tajribamdan foydalanib, kompaniya loyihalariga hissa qo‘shmoqchiman.</div>
+              </div>
+            </div>
+
+            <div class="sentence-row">
+              <div class="sentence-num">2</div>
+              <div class="sentence-content">
+                <div class="sentence-jp">特に、バックエンド開発やAPI設計、データベースの知識を深めたいと考えています。</div>
+                <div class="sentence-romaji">Toku ni, bakkuendo kaihatsu ya API sekkei, dētabēsu no chishiki o fukametai to kangaete imasu.</div>
+                <div class="sentence-uz">Ayniqsa backend, API loyihalash va ma'lumotlar bazasi bo‘yicha bilimlarimni chuqurlashtirmoqchiman.</div>
+              </div>
+            </div>
+
+            <div class="sentence-row">
+              <div class="sentence-num">3</div>
+              <div class="sentence-content">
+                <div class="sentence-jp">また、システム設計やAI技術についても学び続けたいです。</div>
+                <div class="sentence-romaji">Mata, shisutemu sekkei ya AI gijutsu ni tsuite mo manabi tsuzuketai desu.</div>
+                <div class="sentence-uz">System Design va AI texnologiyalarini ham o‘rganishda to'xtovsiz davom etmoqchiman.</div>
+              </div>
+            </div>
+
+            <div class="sentence-row">
+              <div class="sentence-num">4</div>
+              <div class="sentence-content">
+                <div class="sentence-jp">3年後には、設計から開発まで幅広く対応できるエンジニアになりたいです。</div>
+                <div class="sentence-romaji">San-nen go ni wa, sekkei kara kaihatsu made habahiroku taiō dekiru enjinia ni naritai desu.</div>
+                <div class="sentence-uz">Uch yildan keyin loyihalashdan tortib dasturlashgacha turli vazifalarni eplay oladigan muhandis bo‘lmoqchiman.</div>
+              </div>
+            </div>
+
+            <div class="sentence-row">
+              <div class="sentence-num">5</div>
+              <div class="sentence-content">
+                <div class="sentence-jp">将来は、チームの技術的な課題を解決できるテックリードを目指しています。</div>
+                <div class="sentence-romaji">Shōrai wa, chīmu no gijutsuteki na kadai o kaiketsu dekiru tekku rīdo o mezashite imasu.</div>
+                <div class="sentence-uz">Kelajakda butun jamoaning texnik muammolarini hal qila oladigan Tech Lead (Yetakchi Muhandis) bo‘lishni maqsad qilganman.</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="golden-box">
+            <div class="golden-head">🎯 SUHBAT UCHUN ENG MUHIM KARYERA IBORASI:</div>
+            <p style="font-size:13px; color:var(--text-sub); margin-bottom:6px;">
+              HR faqat React yoki backend emas, <strong>qanday rolga intilayotganingizni</strong> ham bilmoqchi. System Design va Yetakchilik (Tech Lead) eng yuqori ball keltiradi.
+            </p>
+            <div class="golden-quote">
+              <span>「将来は、システム設計ができるエンジニアを目指しています。」</span>
+              <button class="btn-copy" onclick="copyText('将来は、システム設計ができるエンジニアを目指しています。')">📋 Nusxa</button>
+            </div>
+            <div class="golden-quote-trans">Shōrai wa, shisutemu sekkei ga dekiru enjinia o mezashite imasu. (Kelajakda tizim arxitekturasini loyihalay oladigan muhandis bo‘lishni maqsad qilganman.)</div>
+          </div>
+        </div>
+
+      </div>
+    </section>
 
     <!-- ==========================================
          SECTION 1: 35 TA YANGI SO'ZLAR
@@ -1339,6 +2088,13 @@
     // FILTER & SEARCH
     document.getElementById('filterInput').addEventListener('input', function(e) {
       const q = e.target.value.toLowerCase().trim();
+      
+      // Filter module cards
+      document.querySelectorAll('.module-card').forEach(card => {
+        const text = card.innerText.toLowerCase();
+        card.style.display = (!q || text.includes(q)) ? 'block' : 'none';
+      });
+
       if (!q) {
         renderWords(WORDS);
         renderCorrections(CORRECTIONS);
@@ -1368,7 +2124,7 @@
       document.querySelectorAll('.tab-pill').forEach(p => p.classList.remove('active'));
       btn.classList.add('active');
 
-      const sections = ['words-sec', 'corrections-sec', 'grammar-sec'];
+      const sections = ['modules-sec', 'words-sec', 'corrections-sec', 'grammar-sec'];
       if (secId === 'all') {
         sections.forEach(s => document.getElementById(s).style.display = 'block');
       } else {
