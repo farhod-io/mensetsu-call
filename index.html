@@ -1722,6 +1722,7 @@
       <button class="tab-btn active" onclick="filterCategory('all', this)">Barchasi</button>
       <button class="tab-btn highlight" onclick="filterCategory('simulator', this)">🎮 Intervyu Simulyatori (Mashq)</button>
       <button class="tab-btn highlight" onclick="filterCategory('cal-facts', this)">🏢 CAL Kompaniyasi Dosyesi</button>
+      <button class="tab-btn highlight" onclick="filterCategory('cal-policies', this)">📜 CAL 8 Ta Mehnat Qoidasi & HR Shartlari</button>
       <button class="tab-btn highlight" onclick="filterCategory('tech-qa', this)">💻 IT Texnik Savol-Javoblar</button>
       <button class="tab-btn highlight" onclick="filterCategory('web-etiquette', this)">📹 Web-Suhbat Odobi & Checklist</button>
       <button class="tab-btn highlight" onclick="filterCategory('hr-rubric', this)">📋 HR Baholash Varakasi</button>
@@ -1797,7 +1798,264 @@
           <div class="sim-ans-uz" id="simAnsUz"></div>
         </div>
       </div>
+    
+    <!-- ========================================================
+         DEDICATED SECTION: CAL HR RULES & OFFICIAL CONDITIONS (8 TA SHART)
+         ======================================================== -->
+    <section class="category-section" data-cat="cal-policies">
+      <div class="section-title">
+        <span>📜 株式会社CAL Rasmiy Mehnat Shartlari & HR Qoidalari (8 Ta Muhim Fakt)</span>
+        <span class="count">Intervyuda to'g'ri tushunish va savol berish (逆質問) uchun oltin manba</span>
+      </div>
+
+      <div class="policy-intro" style="background:var(--surface);border:1px solid var(--border);border-radius:var(--card-radius);padding:18px 22px;margin-bottom:20px;line-height:1.6;font-size:14px;color:var(--text-sub);">
+        💡 <strong>Eslatma:</strong> Ushbu qoidalar CAL kompaniyasining HR boshqarmasi tomonidan berilgan rasmiy tushuntirishlar asosida tayyorlandi. Suhbatda ushbu qoidalarni bilishingiz va ularga mos javob berishingiz (masalan, magistratura, ko'chish va zangyou bo'yicha) suhbatdoshda sizning chuqur tayyorgarligingizni namoyish etadi.
+      </div>
+
+      <div class="q-list">
+
+        <!-- Policy 1: IT Certificates & Initial Salary -->
+        <div class="q-card" data-keywords="IT資格 初任給 sertifikat boshlang'ich maosh oylik IT passport">
+          <div class="q-header">
+            <div class="q-title-row">
+              <span class="q-badge" style="background:rgba(88,166,255,0.15);color:#58a6ff;border:1px solid rgba(88,166,255,0.3);">① Oylik & Sertifikat</span>
+              <h3 class="q-title">① ITの資格があると初任給はあげてもらえるか？</h3>
+            </div>
+            <div class="q-subtitle">IT sertifikatlari (IT Passport, FE, Cloud va h.k.) boshlang'ich maoshga qanday ta'sir qiladi?</div>
+          </div>
+          <div class="answer-body">
+            <div class="jp-block">
+              <div class="jp-label">🇯🇵 HR Rasmiy Javobi:</div>
+              <div class="jp-text">「評価はするが、資格は給料にあまり直接影響はしない。」</div>
+            </div>
+            <div class="uz-block">
+              <div class="uz-label">🇺🇿 Tushuntirish & Suhbat Strategiyasi:</div>
+              <div class="uz-text">
+                • <strong>Mantiq:</strong> Sertifikatlar nomzodning o'rganishga ishtiyoqi (学習意欲) va asosiy bilimlarini baholashda juda yaxshi plyus beradi, lekin boshlang'ich stavka umumiy korporativ me'yorda belgilanadi.<br>
+                • <strong>Suhbatda qanday aytish kerak:</strong> «Sertifikat faqat qog'oz emas, balki real loyihada tezroq moslashishim uchun asosdir. Maoshimni amaliy loyihalarda keltirgan foydam orqali oshirishga intilaman.»
+              </div>
+            </div>
+          </div>
+          <div class="q-actions">
+            <button class="action-btn" onclick="copyCardText(this)">📋 Nusxa olish</button>
+            <button class="action-btn speak" onclick="speakText('ITの資格は自己研鑽の証として高く評価されますが、初任給は実務での成果と貢献度に応じてステップアップしていきます。')">🔊 Tinglash</button>
+          </div>
+        </div>
+
+        <!-- Policy 2: Project Duration -->
+        <div class="q-card" data-keywords="派遣期間 常駐プロジェクト 3年 5年 loyiha muddati haken">
+          <div class="q-header">
+            <div class="q-title-row">
+              <span class="q-badge" style="background:rgba(63,185,80,0.15);color:#3fb950;border:1px solid rgba(63,185,80,0.3);">② Loyiha Muddati</span>
+              <h3 class="q-title">② 派遣される会社一つ一つに大体どれくらい働くことになるか？</h3>
+            </div>
+            <div class="q-subtitle">Har bitta mijoz kompaniyasidagi loyiha muddati qancha davom etadi?</div>
+          </div>
+          <div class="answer-body">
+            <div class="jp-block">
+              <div class="jp-label">🇯🇵 HR Rasmiy Javobi:</div>
+              <div class="jp-text">「最短で1か月だが、そんなプロジェクトは少ない。プロジェクトによって変わってくるが、3年〜5年間同じ会社で働く人もいる。」</div>
+            </div>
+            <div class="uz-block">
+              <div class="uz-label">🇺🇿 Tushuntirish & Suhbat Strategiyasi:</div>
+              <div class="uz-text">
+                • <strong>Mantiq:</strong> Qisqa 1 oylik loyihalar deyarli bo'lmaydi. Odatda loyihalar o'rtacha 1-3 yil, ko'p hollarda esa 3-5 yil bitta kompaniyada davom etadi.<br>
+                • <strong>Suhbatda qanday aytish kerak:</strong> «Qisqa muddatli tezkor topshiriqlarga ham, 3-5 yillik chuqur arxitektura va uzoq muddatli jamoaviy loyihalarga ham to'liq tayyorman. Mijoz bilan ishonch o'rnatishni eng oliy maqsad deb bilaman.»
+              </div>
+            </div>
+          </div>
+          <div class="q-actions">
+            <button class="action-btn" onclick="copyCardText(this)">📋 Nusxa olish</button>
+            <button class="action-btn speak" onclick="speakText('最短1ヶ月から3年から5年の長期案件まで、クライアントの要件に合わせて柔軟に対応し、信頼関係を築いてまいります。')">🔊 Tinglash</button>
+          </div>
+        </div>
+
+        <!-- Policy 3: Relocation & Base Changes -->
+        <div class="q-card" data-keywords="拠点変更 異動 引っ越し 全国18拠点 filial ko'chish">
+          <div class="q-header">
+            <div class="q-title-row">
+              <span class="q-badge" style="background:rgba(210,153,34,0.15);color:#d29922;border:1px solid rgba(210,153,34,0.3);">③ Ko'chish & Filial</span>
+              <h3 class="q-title">③ エンジニアが働く拠点はどれくらいの期間で変更できるか、または会社で変更をされるか？</h3>
+            </div>
+            <div class="q-subtitle">Filial yoki ish joyini almashtirish qanday kechadi? Doimiy ko'chib yurish kerakmi?</div>
+          </div>
+          <div class="answer-body">
+            <div class="jp-block">
+              <div class="jp-label">🇯🇵 HR Rasmiy Javobi:</div>
+              <div class="jp-text">「引っ越しは頻繁にしない。一つの地域で頑張っていただくと会社もその頑張りを評価して、希望配属地域に移動を考えてくれる。」</div>
+            </div>
+            <div class="uz-block">
+              <div class="uz-label">🇺🇿 Tushuntirish & Suhbat Strategiyasi:</div>
+              <div class="uz-text">
+                • <strong>Mantiq:</strong> CAL xodimlarni tez-tez majburiy ko'chirmaydi. Dastlab tayinlangan hududda yaxshi ishlab o'zini ko'rsatgan xodimning xohishiga qarab (希望配属地域), boshqa filialga o'tish arizasi ijobiy ko'rib chiqiladi.<br>
+                • <strong>Suhbatda qanday aytish kerak:</strong> «Boshida qaysi hududga tayinlansam ham, o'sha yerda jamoa bilan mustahkam ildiz otib, natija ko'rsataman.»
+              </div>
+            </div>
+          </div>
+          <div class="q-actions">
+            <button class="action-btn" onclick="copyCardText(this)">📋 Nusxa olish</button>
+            <button class="action-btn speak" onclick="speakText('頻繁な転勤はなく、まずは配属先で誠心誠意成果を出し、将来的に会社と相談の上で希望地域への異動を視野に入れます。')">🔊 Tinglash</button>
+          </div>
+        </div>
+
+        <!-- Policy 4: Side jobs & Online freelance -->
+        <div class="q-card" data-keywords="副業 オンライン 兼業 ruxsat frilans ikkinchi ish">
+          <div class="q-header">
+            <div class="q-title-row">
+              <span class="q-badge" style="background:rgba(248,81,73,0.15);color:#f85149;border:1px solid rgba(248,81,73,0.3);">④ Qo'shimcha Ish (副業)</span>
+              <h3 class="q-title">④ キャルで働きながら、他のオンラインの仕事をしても大丈夫か？</h3>
+            </div>
+            <div class="q-subtitle">CAL'da ishlab turib, masofadan boshqa loyiha yoki frilans qilish mumkinmi?</div>
+          </div>
+          <div class="answer-body">
+            <div class="jp-block">
+              <div class="jp-label">🇯🇵 HR Rasmiy Javobi:</div>
+              <div class="jp-text">「基本禁止だが、したい場合は会社の許可を取る必要がある。」</div>
+            </div>
+            <div class="uz-block">
+              <div class="uz-label">🇺🇿 Tushuntirish & Suhbat Strategiyasi:</div>
+              <div class="uz-text">
+                • <strong>Mantiq:</strong> Xavfsizlik va xodimning toliq diqqatini loyihaga qaratishi uchun odatda taqiqlangan. Alohida hollarda kompaniyaga rasmiy ariza topshirilib, ruxsat olinishi mumkin.<br>
+                • <strong>Suhbatda qanday aytish kerak:</strong> «Mening asosiy maqsadim — bor diqqatimni CAL kompaniyasi loyihalariga qaratish. Kompaniya qoidalariga 100% rioya qilaman.»
+              </div>
+            </div>
+          </div>
+          <div class="q-actions">
+            <button class="action-btn" onclick="copyCardText(this)">📋 Nusxa olish</button>
+            <button class="action-btn speak" onclick="speakText('副業は原則禁止であり、本業である貴社の開発プロジェクトに全精力を注ぐことが最優先だと考えております。')">🔊 Tinglash</button>
+          </div>
+        </div>
+
+        <!-- Policy 5: Tatekae advance payment rules -->
+        <div class="q-card" data-keywords="立て替え制度 返金 全額 半額 返還不要 1年 2年 qarz kompensatsiya">
+          <div class="q-header">
+            <div class="q-title-row">
+              <span class="q-badge" style="background:rgba(188,140,255,0.15);color:#bc8cff;border:1px solid rgba(188,140,255,0.3);">⑤ Xarajatlarni Qoplash (立て替え)</span>
+              <h3 class="q-title">⑤ 立て替え制度でどれくらいの期間働けばどれくらい返金するかのパーセンテージ？</h3>
+            </div>
+            <div class="q-subtitle">Kompaniya tomonidan oldindan to'lab beriladigan xarajatlarni qaytarish shartlari qanday?</div>
+          </div>
+          <div class="answer-body">
+            <div class="jp-block">
+              <div class="jp-label">🇯🇵 HR Rasmiy Javobi:</div>
+              <div class="jp-text">「勤続1年未満：全額返金（100%）
+勤続1年以上2年未満：半額返金（50%）
+勤続2年以上：返還不要（0%・Qaytarish shart emas）」</div>
+            </div>
+            <div class="uz-block">
+              <div class="uz-label">🇺🇿 Tushuntirish & Xulosa:</div>
+              <div class="uz-text">
+                • <strong>1 yildan kam:</strong> Butun xarajat to'liq qaytariladi.<br>
+                • <strong>1-2 yil oralig'ida:</strong> Faqat 50% qismi qaytariladi.<br>
+                • <strong>2 yildan ortiq:</strong> <strong>To'liq kechib yuboriladi (返還不要)</strong>. Demak, kamida 2 yil ishlash niyatida bo'lgan nomzod uchun bu shart mutlaqo yengil va xavfsizdir!
+              </div>
+            </div>
+          </div>
+          <div class="q-actions">
+            <button class="action-btn" onclick="copyCardText(this)">📋 Nusxa olish</button>
+            <button class="action-btn speak" onclick="speakText('立て替え制度につきましては、2年以上の長期勤続を通じて返還不要となるよう、腰を据えて長く貢献する所存です。')">🔊 Tinglash</button>
+          </div>
+        </div>
+
+        <!-- Policy 6: Graduate school (Daigakuin) & Visa rules -->
+        <div class="q-card" data-keywords="大学院 両立 就労ビザ 技術人文知識国際業務 夜間 オンライン magistratura o'qish">
+          <div class="q-header">
+            <div class="q-title-row">
+              <span class="q-badge" style="background:rgba(210,153,34,0.15);color:#d29922;border:1px solid rgba(210,153,34,0.3);">⑥ Magistratura (大学院)</span>
+              <h3 class="q-title">⑥ 大学院にも進学したい場合は両立可能か？（ビザと勤務条件）</h3>
+            </div>
+            <div class="q-subtitle">CAL'da ishlayotib Yaponiyada magistraturada (大学院) o'qisa bo'ladimi? Viza talablari nima?</div>
+          </div>
+          <div class="answer-body">
+            <div class="jp-block">
+              <div class="jp-label">🇯🇵 HR Rasmiy Javobi & Viza Talablari:</div>
+              <div class="jp-text">「キャルで働く場合、技術・人文知識・国際業務ビザが必要なのが前提。
+日本の就労ビザでも大学院に通うこと自体は可能ですが、以下の条件があります：
+1. キャルで働くことがメイン（本業）であること。
+2. フルタイム通学で学業メインになる場合は『留学ビザ』への変更が必要となり、キャルでは働けなくなります。
+3. 夜間大学院やオンライン大学院など、仕事を続けながら通学するケースであれば就労ビザのままでOK。
+4. このような場合は会社に事前報告が必要。面接時に決まっている場合は面接時にお伝えください。」</div>
+            </div>
+            <div class="uz-block">
+              <div class="uz-label">🇺🇿 Tushuntirish & Suhbat Strategiyasi:</div>
+              <div class="uz-text">
+                • <strong>Asosiy qoida:</strong> Ish vizasi bilan o'qishga qonunan ruxsat bor. Lekin kunduzgi full-time bo'lsa talaba vizasiga o'tish talab qilinib, ishdan bo'shashga to'g'ri keladi.<br>
+                • <strong>To'g'ri yo'l:</strong> Kechki (夜間) yoki onlayn magistratura tanlanishi va CAL'dagi 8 soatlik kunduzgi ishga zarracha xalal bermasligi kerak.<br>
+                • <strong>Suhbatda aytish siri:</strong> «Kelajakda bilimimni yanada chuqurlashtirish uchun kechki yoki onlayn magistraturani ko'rib chiqmoqdaman. Albatta, CAL'dagi ishim 1-o'rinda turadi va kompaniya bilan maslahatlashgan holda harakat qilaman.»
+              </div>
+            </div>
+          </div>
+          <div class="q-actions">
+            <button class="action-btn" onclick="copyCardText(this)">📋 Nusxa olish</button>
+            <button class="action-btn speak" onclick="speakText('大学院進学を考える場合でも、キャルでの就労を第一とし、就労ビザの範囲内で夜間やオンライン等、業務に一切支障のない形で両立いたします。')">🔊 Tinglash</button>
+          </div>
+        </div>
+
+        <!-- Policy 7: JDU Tuition fee direct deduction -->
+        <div class="q-card" data-keywords="学費 返済 給与天引き JDU kontrakt to'lov ushlab qolish">
+          <div class="q-header">
+            <div class="q-title-row">
+              <span class="q-badge" style="background:rgba(88,166,255,0.15);color:#58a6ff;border:1px solid rgba(88,166,255,0.3);">⑦ JDU Kontrakti & Maosh</span>
+              <h3 class="q-title">⑦ JDUの学費を就職後に返金していく場合、給料から直接差し引く（天引き）ことはあるか？</h3>
+            </div>
+            <div class="q-subtitle">JDU kontrakt to'lovini CAL oylik maoshdan to'g'ridan-to'g'ri ushlab qoladimi?</div>
+          </div>
+          <div class="answer-body">
+            <div class="jp-block">
+              <div class="jp-label">🇯🇵 HR Rasmiy Javobi:</div>
+              <div class="jp-text">「ないです。学費の返済はJDU側と応募者さんで直接話してください。」</div>
+            </div>
+            <div class="uz-block">
+              <div class="uz-label">🇺🇿 Tushuntirish & Xulosa:</div>
+              <div class="uz-text">
+                • <strong>Xulosa:</strong> Kompaniya ishchining oyligidan JDU foydasiga hech qanday avtomatik ushlanma (天引き - tenbiki) qilmaydi.<br>
+                • Oylik to'liq bank hisobingizga tushadi, kontrakt bo'yicha to'lovlarni o'zingiz JDU bilan to'g'ridan-to'g'ri shartnoma asosida mustaqil amalga oshirasiz.
+              </div>
+            </div>
+          </div>
+          <div class="q-actions">
+            <button class="action-btn" onclick="copyCardText(this)">📋 Nusxa olish</button>
+            <button class="action-btn speak" onclick="speakText('学費の返済は会社からの天引きではなく、私自身と大学の間で責任を持って計画的に管理・履行いたします。')">🔊 Tinglash</button>
+          </div>
+        </div>
+
+        <!-- Policy 8: Overtime (Zangyou 20h+) calculation -->
+        <div class="q-card" data-keywords="残業代 20時間 15分刻み 計算 260000円 ortiqcha ish tarif">
+          <div class="q-header">
+            <div class="q-title-row">
+              <span class="q-badge" style="background:rgba(210,153,34,0.15);color:#d29922;border:1px solid rgba(210,153,34,0.3);">⑧ Ortiqcha Ish (残業代)</span>
+              <h3 class="q-title">⑧ 残業20時間を超えると残業代はいくら支払われるか？（15分刻みの計算式）</h3>
+            </div>
+            <div class="q-subtitle">Oylik 20 soatdan ortiq ishlaganda qo'shimcha ish haqi qanday aniq formula bilan to'lanadi?</div>
+          </div>
+          <div class="answer-body">
+            <div class="jp-block">
+              <div class="jp-label">🇯🇵 HR Rasmiy Tushuntirishi & Formula:</div>
+              <div class="jp-text">「社員それぞれの時給計算額によって変わる。キャルは15分刻みで残業手当が計算される。
+【計算例】：基本給260,000円（含み残業代35,200円）の場合
+1. 実質基本給：260,000円 - 35,200円 = 224,800円
+2. 基準時給：224,800円 ÷ 160時間 = 1,405円 / 時間
+3. 割増時給（1.25倍）：1,405円 × 1.25 = 1,756.25円
+4. 15分あたり残業手当：1,756.25円 × 0.25 = 約439円
+★結論：基本給26万円の人は、15分の残業ごとに約439円が支給されます。」</div>
+            </div>
+            <div class="uz-block">
+              <div class="uz-label">🇺🇿 Tushuntirish & Muhim Nuqta:</div>
+              <div class="uz-text">
+                • Yaponiyadagi ko'plab kompaniyalar 30 daqiqa yoki 1 soatlik yaxlitlash qiladi, ammo CAL <strong>har 15 daqiqalik qadam (15分刻み)</strong> bilan daqiqasigacha halol hisoblaydi.<br>
+                • 20 soatlik belgilangan normadan oshgach, soatiga 1,756 yen, har chorak soat (15 daqiqa) ga 439 yen qo'shilib boradi.
+              </div>
+            </div>
+          </div>
+          <div class="q-actions">
+            <button class="action-btn" onclick="copyCardText(this)">📋 Nusxa olish</button>
+            <button class="action-btn speak" onclick="speakText('キャルでは固定残業20時間を超えた場合、15分刻みで割増残業代が厳密に計算・支給される透明性の高い制度となっております。')">🔊 Tinglash</button>
+          </div>
+        </div>
+
+      </div>
     </section>
+
 
     <!-- ========================================================
          ULTIMATE SECTION 2: CAL CO., LTD. CORPORATE DOSSIER
@@ -9852,6 +10110,24 @@ Ha, albatta 3 ta savolim bor edi:
     // INTERACTIVE MOCK INTERVIEW SIMULATOR ENGINE
     // ========================================================
     const simQuestions = [
+      {
+        qJp: "大学院への進学も視野に入れているとお伺いしましたが、弊社での実務とどのように両立されるお考えでしょうか？",
+        qUz: "Kelajakda magistraturada (大学院) o'qish niyatida ekaningizni aytdingiz, buni CAL'dagi to'liq ish bilan qanday muvofiqlashtirasiz?",
+        ansJp: "はい、将来的な研究と技術深化のために大学院進学も視野に入れておりますが、最優先は御社でのフルタイムの実務であり、技術・人文知識・国際業務の就労ビザを完全に遵守いたします。仮に進学する場合も、昼間の業務に一切支障をきたさない夜間大学院またはオンライン大学院を選択いたします。事前に会社へしっかりと報告・相談（報連相）を行い、学業で得た先端知見を業務に還元して相乗効果を生み出したいと考えております。",
+        ansUz: "CAL'dagi ish 1-o'rinda ekani, mehnat vizasi qoidasiga rioya qilib, faqat kechki yoki onlayn o'qish orqali kunduzgi ishga hech qanday xalal bermaslikni PREP usulida ayting."
+      },
+      {
+        qJp: "プロジェクトの期間（短期から3〜5年の長期まで）や配属拠点について、どのような柔軟性をお持ちですか？",
+        qUz: "Loyiha muddati (1 oydan 3-5 yilgacha) va tayinlanadigan filial/shahar bo'yicha qanday moslashuvchanlikka egasiz?",
+        ansJp: "はい、プロジェクトの期間につきましては、短期の集中案件から3年から5年の長期案件まで、クライアントの要件とチームの目標に合わせて柔軟に対応いたします。また勤務拠点についても、全国18拠点のどこに配属されても喜んで赴任し、まずはその現場で誠心誠意成果を出して信頼を築きます。将来的に成果を評価していただいた上で、希望配属地域への異動も視野に入れ、長く御社に貢献したいと考えております。",
+        ansUz: "Qisqa yoki 3-5 yillik loyihalarga to'liq tayyormisiz, dastlab belgilangan hududda natija berib, keyinchalik baholash asosida xohlagan hududga o'tish niyatini bildiring."
+      },
+      {
+        qJp: "現在JDUで専攻されている内容と、得意なプログラミング言語・技術スタックを教えてください。",
+        qUz: "Hozirda JDU'da qaysi yo'nalishda o'qiyapsiz va qaysi dasturlash tillari hamda texnologiyalarni yaxshi bilasiz?",
+        ansJp: "私は日本デジタル大学（JDU）にてコンピューターサイエンスおよびソフトウェア工学を専攻しており、2027年春に卒業予定です。特にPythonとJavaScriptを用いたバックエンド開発を得意としております。FastAPIやNode.jsによるRESTful APIの設計・構築、PostgreSQLやRedisを活用したデータベースのトランザクション設計やキャッシュ最適化の実践経験がございます。大学のチーム開発でもバックエンドリードとしてAPI連携を担当いたしました。",
+        ansUz: "JDU 2027 bitiruvchisi ekaningiz, Python & JavaScript, FastAPI/Node.js, PostgreSQL/Redis backend va jamoaviy loyiha tajribangizni ixcham ayting."
+      },
       {
         qJp: "はじめに、1分程度で簡単な自己紹介をお願いいたします。",
         qUz: "Boshlanishiga, taxminan 1 daqiqa ichida qisqacha o'zingizni tanishtirib bersangiz.",
