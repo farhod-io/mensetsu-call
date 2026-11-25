@@ -1720,6 +1720,7 @@
     <!-- Category Nav Tabs -->
     <div class="nav-tabs">
       <button class="tab-btn active" onclick="filterCategory('all', this)">Barchasi</button>
+      <button class="tab-btn highlight" style="background:linear-gradient(135deg, #1f6feb, #238636);color:#fff;font-weight:800;border:none;box-shadow:0 2px 10px rgba(31,111,235,0.4);" onclick="filterCategory('qa-table', this)">📋 HR Savollar Master Jadvali (24)</button>
       <button class="tab-btn highlight" onclick="filterCategory('simulator', this)">🎮 Intervyu Simulyatori (Mashq)</button>
       <button class="tab-btn highlight" onclick="filterCategory('cal-facts', this)">🏢 CAL Kompaniyasi Dosyesi</button>
       <button class="tab-btn highlight" onclick="filterCategory('cal-policies', this)">📜 CAL 8 Ta Mehnat Qoidasi & HR Shartlari</button>
@@ -1746,6 +1747,532 @@
       <button class="tab-btn" onclick="filterCategory('gyaku', this)">❓ 逆質問 (HR'ga savollar)</button>
     </div>
 
+
+
+    
+    <!-- ========================================================
+         MASTER SECTION: HR INTERVIEW QUESTIONS TABLE (24 TA MASTER SAVOL)
+         ======================================================== -->
+    <section class="category-section" data-cat="qa-table">
+      <div class="section-title">
+        <span>📋 CAL HR Intervyusida Beriladigan Barcha Savollar Master Jadvali</span>
+        <span class="count">24 ta asosiy savol • Bosqichlar bo'yicha saralash, qidiruv, PREP javob va audio</span>
+      </div>
+
+      <div class="table-container">
+        <!-- Controls & Filters -->
+        <div class="table-controls" style="flex-wrap:wrap; gap:12px;">
+          <div class="table-filter-group" id="qaTableFilters" style="display:flex; flex-wrap:wrap; gap:6px;">
+            <button class="tbl-btn active" onclick="filterQaStage('all', this)">Barchasi (24)</button>
+            <button class="tbl-btn" onclick="filterQaStage('intro', this)">🌟 Kirish & Jikoshoukai (3)</button>
+            <button class="tbl-btn" onclick="filterQaStage('cal', this)">🏢 Nega CAL & SES (5)</button>
+            <button class="tbl-btn" onclick="filterQaStage('policy', this)">📜 Qoidalar & Magistratura (4)</button>
+            <button class="tbl-btn" onclick="filterQaStage('tech', this)">💻 IT Texnik & Loyihalar (5)</button>
+            <button class="tbl-btn" onclick="filterQaStage('behavioral', this)">🧠 Qiyinchilik & Xarakter (4)</button>
+            <button class="tbl-btn" onclick="filterQaStage('closing', this)">❓ Yakun & Teskari Savol (3)</button>
+          </div>
+          <input type="text" class="table-search-input" id="qaSearchInput" oninput="searchQaTable(this.value)" placeholder="🔍 Savollardan qidiring (masalan: 志望動機, 大学院, Bionexstar, 残業)..." style="min-width:280px;">
+        </div>
+
+        <!-- Table Responsive Wrap -->
+        <div class="responsive-table-wrap" style="max-height:800px;">
+          <table class="v-table" id="masterQaTable">
+            <thead>
+              <tr>
+                <th style="width: 105px;">Bosqich / №</th>
+                <th style="width: 280px;">HR Tomonidan Beriladigan Savol</th>
+                <th style="width: 250px;">O'zbekcha Ma'nosi & HR Niyati</th>
+                <th>Tavsiya Qilingan PREP Qisqa Javob & Kalit Iboralar</th>
+                <th style="width: 80px; text-align: center;">Audio</th>
+              </tr>
+            </thead>
+            <tbody id="qaTableBody">
+
+              <!-- 1. Opening Greeting -->
+              <tr data-stage="intro" data-keywords="kirish salomlashish gamen onsei ekran ovoz">
+                <td><span class="badge-tbl" style="background:rgba(88,166,255,0.15);color:#58a6ff;border:1px solid rgba(88,166,255,0.3);">1. Kirish</span></td>
+                <td>
+                  <div class="t-kanji" style="font-size:14px;color:#fff;line-height:1.4;">画面や音声は問題なく届いておりますでしょうか。</div>
+                  <div class="t-kana" style="color:var(--text-muted);font-size:12px;">がめん や おんせい は もんだい なく とどいて おります でしょう か</div>
+                </td>
+                <td>
+                  <strong style="color:#e6edf3;">Ekran va ovozni tekshirish:</strong>
+                  <div style="font-size:12px;color:var(--text-sub);margin-top:3px;">Texnika sozligini tasdiqlab, samimiy salomlashish orqali mas'uliyatni ko'rsatish.</div>
+                </td>
+                <td>
+                  <div class="t-example-jp" style="font-size:12.5px;color:#fff;">「はい、画面・音声ともにクリアに届いております。本日は貴重なお時間をいただき誠にありがとうございます。どうぞよろしくお願いいたします。」</div>
+                  <div class="t-example-uz" style="font-size:11.5px;color:var(--text-muted);margin-top:2px;">Ha, ekran va ovoz a'lo darajada. Qimmatli vaqtingizni ajratganingiz uchun rahmat.</div>
+                </td>
+                <td style="text-align: center;">
+                  <button class="mini-speak-btn" onclick="speakText('画面や音声は問題なく届いておりますでしょうか。本日はどうぞよろしくお願いいたします。')">🔊</button>
+                </td>
+              </tr>
+
+              <!-- 2. Jikoshoukai -->
+              <tr data-stage="intro" data-keywords="自己紹介 じこしょうかい jikoshoukai 1分 tanishtiruv farhod jdu">
+                <td><span class="badge-tbl" style="background:rgba(88,166,255,0.15);color:#58a6ff;border:1px solid rgba(88,166,255,0.3);">2. Tanishtiruv</span></td>
+                <td>
+                  <div class="t-kanji" style="font-size:14px;color:#fff;line-height:1.4;">はじめに、1分程度で簡単な自己紹介をお願いいたします。</div>
+                  <div class="t-kana" style="color:var(--text-muted);font-size:12px;">はじめに、いっぷん ていど で かんたん な じこしょうかい を おねがい いたします</div>
+                </td>
+                <td>
+                  <strong style="color:#e6edf3;">1 daqiqalik o'zini tanishtirish:</strong>
+                  <div style="font-size:12px;color:var(--text-sub);margin-top:3px;">Ism, JDU IT 2027 bahor, Python/JS, Bionexstar va N2 darajani 60 soniyada lo'nda aytish.</div>
+                </td>
+                <td>
+                  <div class="t-example-jp" style="font-size:12.5px;color:#fff;">「改めまして、ファルホドと申します。現在JDUにてWeb開発を専攻し、2027年春に卒業予定です。Python、JavaScript、Reactを用いたフルスタック開発と『Bionexstar』の実績がございます。日本語N2を取得しております。本日はよろしくお願いいたします。」</div>
+                  <div class="t-example-uz" style="font-size:11.5px;color:var(--text-muted);margin-top:2px;">Farhod, JDU 2027 bitiruvchisi, Python/JS/React va N2 sertifikati.</div>
+                </td>
+                <td style="text-align: center;">
+                  <button class="mini-speak-btn" onclick="speakText('はじめに、1分程度で簡単な自己紹介をお願いいたします。')">🔊</button>
+                </td>
+              </tr>
+
+              <!-- 3. Why Japan -->
+              <tr data-stage="intro" data-keywords="なぜ日本 日本で働く理由 nega yaponiya why japan monozukuri">
+                <td><span class="badge-tbl" style="background:rgba(88,166,255,0.15);color:#58a6ff;border:1px solid rgba(88,166,255,0.3);">3. Nega Yaponiya</span></td>
+                <td>
+                  <div class="t-kanji" style="font-size:14px;color:#fff;line-height:1.4;">なぜ母国や欧米ではなく、日本で働きたいと考えたのですか？</div>
+                  <div class="t-kana" style="color:var(--text-muted);font-size:12px;">なぜ ぼこく や おうべい ではなく、にほん で はたらきたい と かんがえた の ですか</div>
+                </td>
+                <td>
+                  <strong style="color:#e6edf3;">Yaponiyani tanlash asosi:</strong>
+                  <div style="font-size:12px;color:var(--text-sub);margin-top:3px;">Uzoq muddat yashab ishlash niyati va Yaponiyaning yuqori sifat madaniyati bilan bog'lash.</div>
+                </td>
+                <td>
+                  <div class="t-example-jp" style="font-size:12.5px;color:#fff;">「日本の徹底した品質へのこだわりと、チーム全員で創り上げる開発文化に共感したからです。JDUで学んだ知見を活かし、日本で長くエンジニアとしてキャリアを築きたいです。」</div>
+                  <div class="t-example-uz" style="font-size:11.5px;color:var(--text-muted);margin-top:2px;">Monozukuri sifati va jamoaviy madaniyat, Yaponiyada uzoq yashab ishlash maqsadi.</div>
+                </td>
+                <td style="text-align: center;">
+                  <button class="mini-speak-btn" onclick="speakText('なぜ母国や欧米ではなく、日本で働きたいと考えたのですか？')">🔊</button>
+                </td>
+              </tr>
+
+              <!-- 4. Why CAL -->
+              <tr data-stage="cal" data-keywords="志望動機 なぜCAL なぜ当社 challenge and lead 18拠点">
+                <td><span class="badge-tbl" style="background:rgba(210,153,34,0.15);color:#d29922;border:1px solid rgba(210,153,34,0.3);">4. Nega CAL</span></td>
+                <td>
+                  <div class="t-kanji" style="font-size:14px;color:#fff;line-height:1.4;">数あるIT企業の中で、なぜ当社（CAL）を志望されたのですか？</div>
+                  <div class="t-kana" style="color:var(--text-muted);font-size:12px;">かずある あいてぃー きぎょう の なかで、なぜ とうしゃ を しぼう された の ですか</div>
+                </td>
+                <td>
+                  <strong style="color:#e6edf3;">CAL'ni tanlash sababi:</strong>
+                  <div style="font-size:12px;color:var(--text-sub);margin-top:3px;">«Challenge And Lead» g'oyasi, 18 filial va turli sohalardagi loyihalarda o'sish.</div>
+                </td>
+                <td>
+                  <div class="t-example-jp" style="font-size:12.5px;color:#fff;">「貴社の『Challenge And Lead』という理念、全国18拠点で多様な業界の開発を手掛けられ、若手のうちから自律的に挑戦できる環境に強く惹かれたためです。」</div>
+                  <div class="t-example-uz" style="font-size:11.5px;color:var(--text-muted);margin-top:2px;">Keng ko'lamli loyihalar, 18 ta filial va erta mas'uliyat olish imkoniyati.</div>
+                </td>
+                <td style="text-align: center;">
+                  <button class="mini-speak-btn" onclick="speakText('数あるIT企業の中で、なぜ当社を志望されたのですか？')">🔊</button>
+                </td>
+              </tr>
+
+              <!-- 5. Job criteria (Shuukatsu no jiku) -->
+              <tr data-stage="cal" data-keywords="就活の軸 企業選び mezon ish tanlash">
+                <td><span class="badge-tbl" style="background:rgba(210,153,34,0.15);color:#d29922;border:1px solid rgba(210,153,34,0.3);">5. Tanlov Mezoni</span></td>
+                <td>
+                  <div class="t-kanji" style="font-size:14px;color:#fff;line-height:1.4;">企業選びで最も大切にしている「就活の軸」は何ですか？なぜ当社が合致しますか？</div>
+                  <div class="t-kana" style="color:var(--text-muted);font-size:12px;">きぎょうえらび で もっとも たいせつ に している しゅうかつ の じく は なん ですか</div>
+                </td>
+                <td>
+                  <strong style="color:#e6edf3;">Kompaniya tanlash mezoni:</strong>
+                  <div style="font-size:12px;color:var(--text-sub);margin-top:3px;">Faqat kod yozish emas, mijoz muammosini hal qilish va doimiy o'sish maydoni bo'lishi.</div>
+                </td>
+                <td>
+                  <div class="t-example-jp" style="font-size:12.5px;color:#fff;">「私の軸は『若手から多様な現場で技術と業務知識を吸収し、顧客の真の課題に向き合えること』です。CALの事業展開は私の軸に100％合致します。」</div>
+                  <div class="t-example-uz" style="font-size:11.5px;color:var(--text-muted);margin-top:2px;">Mijoz muammolarini yechish va keng ko'lamli loyihalar tajribasi.</div>
+                </td>
+                <td style="text-align: center;">
+                  <button class="mini-speak-btn" onclick="speakText('企業選びで最も大切にしている就活の軸は何ですか？なぜ当社がそれに合致しますか？')">🔊</button>
+                </td>
+              </tr>
+
+              <!-- 6. CAL STYLE -->
+              <tr data-stage="cal" data-keywords="CAL STYLE 情熱 挑戦 成長 passion challenge grow up">
+                <td><span class="badge-tbl" style="background:rgba(210,153,34,0.15);color:#d29922;border:1px solid rgba(210,153,34,0.3);">6. CAL STYLE</span></td>
+                <td>
+                  <div class="t-kanji" style="font-size:14px;color:#fff;line-height:1.4;">CALの「Passion・Challenge・Grow Up」をご自身の経験でどう体現してきましたか？</div>
+                  <div class="t-kana" style="color:var(--text-muted);font-size:12px;">きゃる の ぱっしょん・ちゃれんじ・ぐろうあっぷ を ごじしん の けいけん で どう たいげん</div>
+                </td>
+                <td>
+                  <strong style="color:#e6edf3;">Kompaniya 3 ta shiori:</strong>
+                  <div style="font-size:12px;color:var(--text-sub);margin-top:3px;">Ishtiyoq (kodlash), Chaqiriq (Bionexstar), O'sish (N2 daraja) misolida ko'rsatish.</div>
+                </td>
+                <td>
+                  <div class="t-example-jp" style="font-size:12.5px;color:#fff;">「ITへの情熱、Bionexstar開発への果敢な挑戦、そしてゼロから日本語N2を取得した継続的な成長を通じて体現してまいりました。」</div>
+                  <div class="t-example-uz" style="font-size:11.5px;color:var(--text-muted);margin-top:2px;">Kundalik izlanish, murakkab tizim chaqirig'i va N2 gacha yetishgan qat'iyat.</div>
+                </td>
+                <td style="text-align: center;">
+                  <button class="mini-speak-btn" onclick="speakText('CALのPassion・Challenge・Grow Upをご自身の経験でどう体現してきましたか？')">🔊</button>
+                </td>
+              </tr>
+
+              <!-- 7. SES & Client site dispatch -->
+              <tr data-stage="cal" data-keywords="客先常駐 SES 不安 抵抗 ses mijoz ofisi dispatch">
+                <td><span class="badge-tbl" style="background:rgba(210,153,34,0.15);color:#d29922;border:1px solid rgba(210,153,34,0.3);">7. SES & Moslashuv</span></td>
+                <td>
+                  <div class="t-kanji" style="font-size:14px;color:#fff;line-height:1.4;">客先常駐（SES）やプロジェクト先での勤務に不安や抵抗はありませんか？</div>
+                  <div class="t-kana" style="color:var(--text-muted);font-size:12px;">きゃくさき じょうちゅう や ぷろじぇくとさき での きんむ に ふあん や ていこう は ありません か</div>
+                </td>
+                <td>
+                  <strong style="color:#e6edf3;">Mijoz ofisida ishlashga munosabat:</strong>
+                  <div style="font-size:12px;color:var(--text-sub);margin-top:3px;">Xavotir yo'qligini, aksincha turli sohalarni tez o'rganish imkoniyati deb bilishni aytish.</div>
+                </td>
+                <td>
+                  <div class="t-example-jp" style="font-size:12.5px;color:#fff;">「全く問題ございません。多様な業界の業務知識と最先端の技術を短期間で吸収でき、高い適応力とコミュニケーション力を磨ける環境だと前向きに捉えております。」</div>
+                  <div class="t-example-uz" style="font-size:11.5px;color:var(--text-muted);margin-top:2px;">Turli sohalar mantig'i va texnologiyalarni tezkor o'zlashtirish maydoni.</div>
+                </td>
+                <td style="text-align: center;">
+                  <button class="mini-speak-btn" onclick="speakText('客先常駐やプロジェクト先での勤務に不安や抵抗はありませんか？')">🔊</button>
+                </td>
+              </tr>
+
+              <!-- 8. Project Duration & Relocation -->
+              <tr data-stage="cal" data-keywords="プロジェクト期間 派遣期間 配属拠点 引っ越し 3年 5年 loyiha muddati ko'chish">
+                <td><span class="badge-tbl" style="background:rgba(210,153,34,0.15);color:#d29922;border:1px solid rgba(210,153,34,0.3);">8. Loyiha Muddati</span></td>
+                <td>
+                  <div class="t-kanji" style="font-size:14px;color:#fff;line-height:1.4;">プロジェクトの期間（短期から3〜5年の長期まで）や配属拠点についてどう考えますか？</div>
+                  <div class="t-kana" style="color:var(--text-muted);font-size:12px;">ぷろじぇくと の きかん や はいぞく きょてん に ついて どう かんがえます か</div>
+                </td>
+                <td>
+                  <strong style="color:#e6edf3;">Loyiha davomiyligi va filial:</strong>
+                  <div style="font-size:12px;color:var(--text-sub);margin-top:3px;">Qisqa yoki 3-5 yillik loyihalarga tayyorlik, dastlabki hududda ishonchni oqlash.</div>
+                </td>
+                <td>
+                  <div class="t-example-jp" style="font-size:12.5px;color:#fff;">「短期から3〜5年の長期まで柔軟に対応いたします。全国18拠点のどこに配属されても誠心誠意成果を出し、成果を評価された上で希望地域への異動も視野に入れます。」</div>
+                  <div class="t-example-uz" style="font-size:11.5px;color:var(--text-muted);margin-top:2px;">Har qanday muddatga tayyorlik, dastlabki joyda natija ko'rsatish.</div>
+                </td>
+                <td style="text-align: center;">
+                  <button class="mini-speak-btn" onclick="speakText('プロジェクトの期間や配属拠点についてどう考えますか？')">🔊</button>
+                </td>
+              </tr>
+
+              <!-- 9. Graduate School (Daigakuin) -->
+              <tr data-stage="policy" data-keywords="大学院進学 両立 就労ビザ 夜間 オンライン magistratura o'qish daigakuin">
+                <td><span class="badge-tbl" style="background:rgba(188,140,255,0.15);color:#bc8cff;border:1px solid rgba(188,140,255,0.3);">9. Magistratura</span></td>
+                <td>
+                  <div class="t-kanji" style="font-size:14px;color:#fff;line-height:1.4;">将来、大学院への進学を考えているとのことですが、実務とどう両立されますか？</div>
+                  <div class="t-kana" style="color:var(--text-muted);font-size:12px;">しょうらい、だいがくいん へ の しんがく を かんがえて いる と の こと です が、じつむ と どう りょうりつ</div>
+                </td>
+                <td>
+                  <strong style="color:#e6edf3;">Magistratura va CAL ishi:</strong>
+                  <div style="font-size:12px;color:var(--text-sub);margin-top:3px;">Ish 1-o'rinda, faqat kechki/onlayn magistratura, ish vizasiga qat'iy amal qilish.</div>
+                </td>
+                <td>
+                  <div class="t-example-jp" style="font-size:12.5px;color:#fff;">「最優先は御社での実務であり就労ビザを遵守します。進学時も業務に支障のない夜間・オンライン大学院を選択し、事前に報連相を徹底して相乗効果を生み出します。」</div>
+                  <div class="t-example-uz" style="font-size:11.5px;color:var(--text-muted);margin-top:2px;">Kunduzgi ishga xalal bermaydigan kechki/onlayn ta'lim va oldindan maslahatlashish.</div>
+                </td>
+                <td style="text-align: center;">
+                  <button class="mini-speak-btn" onclick="speakText('将来大学院への進学を考えているとのことですが実務とどのように両立されますか？')">🔊</button>
+                </td>
+              </tr>
+
+              <!-- 10. Tatekae Advance payment rules -->
+              <tr data-stage="policy" data-keywords="立て替え制度 返金 返還不要 2年以上 tatekae qarz kompensatsiya">
+                <td><span class="badge-tbl" style="background:rgba(188,140,255,0.15);color:#bc8cff;border:1px solid rgba(188,140,255,0.3);">10. Tatekae Tizimi</span></td>
+                <td>
+                  <div class="t-kanji" style="font-size:14px;color:#fff;line-height:1.4;">弊社の立て替え制度（費用負担）についてのルールは理解されていますか？</div>
+                  <div class="t-kana" style="color:var(--text-muted);font-size:12px;">へいしゃ の たてかえ せいど に ついて の るーる は りかい されて います か</div>
+                </td>
+                <td>
+                  <strong style="color:#e6edf3;">Xarajatlarni qoplash tartibi:</strong>
+                  <div style="font-size:12px;color:var(--text-sub);margin-top:3px;">2 yildan ortiq ishlansa to'liq kechib yuborilishini (返還不要) tushunganlik.</div>
+                </td>
+                <td>
+                  <div class="t-example-jp" style="font-size:12.5px;color:#fff;">「はい、勤続2年以上で返還不要となる制度と理解しております。腰を据えて2年以上、長く御社に貢献する所存ですので問題ございません。」</div>
+                  <div class="t-example-uz" style="font-size:11.5px;color:var(--text-muted);margin-top:2px;">2 yildan ortiq barqaror ishlash orqali to'liq qoplanishi va uzoq yillik niyat.</div>
+                </td>
+                <td style="text-align: center;">
+                  <button class="mini-speak-btn" onclick="speakText('弊社の立て替え制度についてのルールは理解されていますか？')">🔊</button>
+                </td>
+              </tr>
+
+              <!-- 11. Side job / Fukugyou -->
+              <tr data-stage="policy" data-keywords="副業 オンライン 兼業 原則禁止 fukugyou ikkinchi ish">
+                <td><span class="badge-tbl" style="background:rgba(188,140,255,0.15);color:#bc8cff;border:1px solid rgba(188,140,255,0.3);">11. Qo'shimcha Ish</span></td>
+                <td>
+                  <div class="t-kanji" style="font-size:14px;color:#fff;line-height:1.4;">入社後、他のオンライン業務や副業を行う予定はありますか？</div>
+                  <div class="t-kana" style="color:var(--text-muted);font-size:12px;">にゅうしゃご、ほか の おんらいん ぎょうむ や ふくぎょう を おこなう よてい は あります か</div>
+                </td>
+                <td>
+                  <strong style="color:#e6edf3;">Frilans va ikkinchi ish:</strong>
+                  <div style="font-size:12px;color:var(--text-sub);margin-top:3px;">Kompaniya qoidalariga rioya qilish (asosan taqiqlangan) va bor diqqatni CAL'ga qaratish.</div>
+                </td>
+                <td>
+                  <div class="t-example-jp" style="font-size:12.5px;color:#fff;">「予定はございません。副業は原則禁止と理解しており、本業である御社のプロジェクトに全精力を注ぐことが最優先だと考えております。」</div>
+                  <div class="t-example-uz" style="font-size:11.5px;color:var(--text-muted);margin-top:2px;">Bor e'tibor va kuchni faqat CAL loyihalariga qaratish.</div>
+                </td>
+                <td style="text-align: center;">
+                  <button class="mini-speak-btn" onclick="speakText('入社後他のオンライン業務や副業を行う予定はありますか？')">🔊</button>
+                </td>
+              </tr>
+
+              <!-- 12. Overtime / Zangyou -->
+              <tr data-stage="policy" data-keywords="残業 20時間 15分刻み 健康管理 zangyou overtime ortiqcha ish">
+                <td><span class="badge-tbl" style="background:rgba(188,140,255,0.15);color:#bc8cff;border:1px solid rgba(188,140,255,0.3);">12. Ortiqcha Ish</span></td>
+                <td>
+                  <div class="t-kanji" style="font-size:14px;color:#fff;line-height:1.4;">繁忙期に残業が発生する場合がありますが、健康管理を含め対応可能ですか？</div>
+                  <div class="t-kana" style="color:var(--text-muted);font-size:12px;">はんぼうき に ざんぎょう が はっせい する ばあい が あります が、けんこう かんり を ふくめ たいおう かのう</div>
+                </td>
+                <td>
+                  <strong style="color:#e6edf3;">Zangyou va chidamlilik:</strong>
+                  <div style="font-size:12px;color:var(--text-sub);margin-top:3px;">Muddatga ulgurish uchun zarur ishga tayyorlik, sport va sog'lom turmush tarzi.</div>
+                </td>
+                <td>
+                  <div class="t-example-jp" style="font-size:12.5px;color:#fff;">「はい、納期遵守とプロジェクト成功のための残業であれば全力で対応いたします。日頃から運動と睡眠で自己管理を徹底しており、心身ともに健康です。」</div>
+                  <div class="t-example-uz" style="font-size:11.5px;color:var(--text-muted);margin-top:2px;">Mas'uliyatli qo'shimcha ishga tayyorlik va mustahkam sog'liq.</div>
+                </td>
+                <td style="text-align: center;">
+                  <button class="mini-speak-btn" onclick="speakText('繁忙期に残業が発生する場合がありますが健康管理を含め対応可能ですか？')">🔊</button>
+                </td>
+              </tr>
+
+              <!-- 13. Self-PR (Strength) -->
+              <tr data-stage="behavioral" data-keywords="自己PR 強み 長所 課題解決能力 kuchli tomon self pr">
+                <td><span class="badge-tbl" style="background:rgba(63,185,80,0.15);color:#3fb950;border:1px solid rgba(63,185,80,0.3);">13. Kuchli Tomon</span></td>
+                <td>
+                  <div class="t-kanji" style="font-size:14px;color:#fff;line-height:1.4;">あなたの最大の強み（自己PR）は何ですか？</div>
+                  <div class="t-kana" style="color:var(--text-muted);font-size:12px;">あなた の さいだい の つよみ（じこぴーあーる）は なん ですか</div>
+                </td>
+                <td>
+                  <strong style="color:#e6edf3;">O'zining ustun ko'nikmasi:</strong>
+                  <div style="font-size:12px;color:var(--text-sub);margin-top:3px;">Muammo yechish (課題解決能力) va mustaqil o'rganish (キャッチアップ力).</div>
+                </td>
+                <td>
+                  <div class="t-example-jp" style="font-size:12.5px;color:#fff;">「私の強みは『粘り強い課題解決能力』です。エラー時にログを徹底分析し、自力で30分調査して道筋が見えない場合は先輩に相談する報連相を徹底しています。」</div>
+                  <div class="t-example-uz" style="font-size:11.5px;color:var(--text-muted);margin-top:2px;">Tizimli tahlil va 30 daqiqa mustaqil izlanishdan so'ng Hou-Ren-So qilish.</div>
+                </td>
+                <td style="text-align: center;">
+                  <button class="mini-speak-btn" onclick="speakText('あなたの最大の強みは何ですか？')">🔊</button>
+                </td>
+              </tr>
+
+              <!-- 14. Weakness & Solution -->
+              <tr data-stage="behavioral" data-keywords="短所 弱み kamchilik zaif tomon tanqid">
+                <td><span class="badge-tbl" style="background:rgba(63,185,80,0.15);color:#3fb950;border:1px solid rgba(63,185,80,0.3);">14. Zaif Tomon</span></td>
+                <td>
+                  <div class="t-kanji" style="font-size:14px;color:#fff;line-height:1.4;">ご自身の短所や弱みは何ですか？どう克服しようとしていますか？</div>
+                  <div class="t-kana" style="color:var(--text-muted);font-size:12px;">ごじしん の たんしょ や よわみ は なん ですか？どう こくふく しよう と して います か</div>
+                </td>
+                <td>
+                  <strong style="color:#e6edf3;">Kamchilikni tuzatish harakati:</strong>
+                  <div style="font-size:12px;color:var(--text-sub);margin-top:3px;">Ishga haddan ortiq berilib ketishni muddatlarni 120% rejalash bilan boshqarish.</div>
+                </td>
+                <td>
+                  <div class="t-example-jp" style="font-size:12.5px;color:#fff;">「短所は『一人で抱え込みがちになる点』です。現在は課題発生から30分自力で調べて進展がなければ、すぐにチームに報連相を行うルールを徹底しています。」</div>
+                  <div class="t-example-uz" style="font-size:11.5px;color:var(--text-muted);margin-top:2px;">Muammoni yolg'iz yechishga urinish kamchiligini erta maslahat bilan bartaraf etish.</div>
+                </td>
+                <td style="text-align: center;">
+                  <button class="mini-speak-btn" onclick="speakText('ご自身の短所や弱みは何ですか？どう克服しようとしていますか？')">🔊</button>
+                </td>
+              </tr>
+
+              <!-- 15. Team Conflict -->
+              <tr data-stage="behavioral" data-keywords="意見対立 チーム開発 nizo jamoa fikrlar to'qnashuvi">
+                <td><span class="badge-tbl" style="background:rgba(63,185,80,0.15);color:#3fb950;border:1px solid rgba(63,185,80,0.3);">15. Jamoa & Murosa</span></td>
+                <td>
+                  <div class="t-kanji" style="font-size:14px;color:#fff;line-height:1.4;">開発方針や仕様でチームメンバーや上司と意見が対立した時、どう対処しますか？</div>
+                  <div class="t-kana" style="color:var(--text-muted);font-size:12px;">かいはつ ほうしん や しよう で ちーむめんばー や じょうし と いけん が たいりつ した とき</div>
+                </td>
+                <td>
+                  <strong style="color:#e6edf3;">Fikrlar to'qnashganda kelishuv:</strong>
+                  <div style="font-size:12px;color:var(--text-sub);margin-top:3px;">O'z fikrida qaysarlik qilmay, mahsulot va mijoz manfaatini birinchi o'ringa qo'yish.</div>
+                </td>
+                <td>
+                  <div class="t-example-jp" style="font-size:12.5px;color:#fff;">「自分の意見に固執せず、プロダクトと顧客にとって何が最善かを基準に対話します。相手の意図を傾聴し、客観的なデータを示してチームの決定に従います。」</div>
+                  <div class="t-example-uz" style="font-size:11.5px;color:var(--text-muted);margin-top:2px;">Eshitish madaniyati, dalillar bilan tushuntirish va jamoa qarorini hurmat qilish.</div>
+                </td>
+                <td style="text-align: center;">
+                  <button class="mini-speak-btn" onclick="speakText('開発方針や仕様でチームメンバーや上司と意見が対立した時どう対処しますか？')">🔊</button>
+                </td>
+              </tr>
+
+              <!-- 16. Why hire foreigner / you -->
+              <tr data-stage="behavioral" data-keywords="外国人採用 自走力 chet ellik nega siz nomzod afzalligi">
+                <td><span class="badge-tbl" style="background:rgba(63,185,80,0.15);color:#3fb950;border:1px solid rgba(63,185,80,0.3);">16. Nomzod Qadri</span></td>
+                <td>
+                  <div class="t-kanji" style="font-size:14px;color:#fff;line-height:1.4;">なぜ日本人学生ではなく、外国人であるあなたを採用すべきなのですか？</div>
+                  <div class="t-kana" style="color:var(--text-muted);font-size:12px;">なぜ にほんじん がくせい ではなく、がいこくじん で ある あなた を さいよう すべき な の ですか</div>
+                </td>
+                <td>
+                  <strong style="color:#e6edf3;">Chet ellik nomzod sifatidagi plyus:</strong>
+                  <div style="font-size:12px;color:var(--text-sub);margin-top:3px;">Noldan natija qilish kuchi (自走力) va kelajakdagi xalqaro ko'prik (Bridge SE).</div>
+                </td>
+                <td>
+                  <div class="t-example-jp" style="font-size:12.5px;color:#fff;">「ゼロから日本語とITを同時に修得し成果を出してきた『自走力』と、将来CALがグローバル展開される際に技術と文化の架け橋になれる点です。」</div>
+                  <div class="t-example-uz" style="font-size:11.5px;color:var(--text-muted);margin-top:2px;">Bo'shliqdan boshlab N2 va mahsulotlar yaratgan harakat kuchi va ko'prik bo'la olish.</div>
+                </td>
+                <td style="text-align: center;">
+                  <button class="mini-speak-btn" onclick="speakText('なぜ日本人学生ではなく外国人であるあなたを採用すべきなのですか？')">🔊</button>
+                </td>
+              </tr>
+
+              <!-- 17. Tech Stack & JDU -->
+              <tr data-stage="tech" data-keywords="技術スタック JDU Python JavaScript FastAPI Nodejs PostgreSQL Redis texnik bilim">
+                <td><span class="badge-tbl" style="background:rgba(56,139,253,0.15);color:#58a6ff;border:1px solid rgba(56,139,253,0.3);">17. Texnik Stack</span></td>
+                <td>
+                  <div class="t-kanji" style="font-size:14px;color:#fff;line-height:1.4;">現在JDUで専攻されている内容と、得意なプログラミング言語・技術スタックを教えてください。</div>
+                  <div class="t-kana" style="color:var(--text-muted);font-size:12px;">げんざい JDU で せんこう されて いる ないよう と、とくい な ぷろぐらみんぐ げんご を おしえて</div>
+                </td>
+                <td>
+                  <strong style="color:#e6edf3;">Universitet va texnologiyalar:</strong>
+                  <div style="font-size:12px;color:var(--text-sub);margin-top:3px;">Python va JavaScript, FastAPI/Node.js backend, PostgreSQL/Redis bazasi.</div>
+                </td>
+                <td>
+                  <div class="t-example-jp" style="font-size:12.5px;color:#fff;">「JDUでCSを専攻し2027年春卒業予定です。Python（FastAPI）とJavaScript（Node.js/React）を用いたバックエンドAPI設計、PostgreSQLのトランザクション設計やRedisキャッシュを得意としています。」</div>
+                  <div class="t-example-uz" style="font-size:11.5px;color:var(--text-muted);margin-top:2px;">FastAPI, Node.js, PostgreSQL va Redis orqali yuqori tezlikdagi tizimlar yaratish.</div>
+                </td>
+                <td style="text-align: center;">
+                  <button class="mini-speak-btn" onclick="speakText('現在JDUで専攻されている内容と得意なプログラミング言語技術スタックを教えてください。')">🔊</button>
+                </td>
+              </tr>
+
+              <!-- 18. Tech selection reason -->
+              <tr data-stage="tech" data-keywords="技術選定 Bionexstar PostgreSQL FastAPI Redis texnologiya tanlovi">
+                <td><span class="badge-tbl" style="background:rgba(56,139,253,0.15);color:#58a6ff;border:1px solid rgba(56,139,253,0.3);">18. Texnika Tanlovi</span></td>
+                <td>
+                  <div class="t-kanji" style="font-size:14px;color:#fff;line-height:1.4;">ポートフォリオ開発（Bionexstar等）で、なぜその技術スタックを選定したのですか？</div>
+                  <div class="t-kana" style="color:var(--text-muted);font-size:12px;">ぽーとふぉりお かいはつ で、なぜ その ぎじゅつ すたっく を せんてい した の ですか</div>
+                </td>
+                <td>
+                  <strong style="color:#e6edf3;">Mantiqiy texnik tanlov:</strong>
+                  <div style="font-size:12px;color:var(--text-sub);margin-top:3px;">ACID tranzaksiya (PostgreSQL), asinxron API (FastAPI) va kesh (Redis).</div>
+                </td>
+                <td>
+                  <div class="t-example-jp" style="font-size:12.5px;color:#fff;">「整合性のためにPostgreSQL、非同期処理と型安全性のためにFastAPIを選定しました。頻出データにRedisキャッシュを導入し応答速度を2.7倍に改善しました。」</div>
+                  <div class="t-example-uz" style="font-size:11.5px;color:var(--text-muted);margin-top:2px;">Ma'lumotlar yaxlitligi va 2.7 barobar tezlik o'sishi mezonlari.</div>
+                </td>
+                <td style="text-align: center;">
+                  <button class="mini-speak-btn" onclick="speakText('ポートフォリオ開発でなぜその技術スタックを選定したのですか？')">🔊</button>
+                </td>
+              </tr>
+
+              <!-- 19. Catchup on unexperienced tech -->
+              <tr data-stage="tech" data-keywords="未経験技術 キャッチアップ catchup yangi til o'rganish">
+                <td><span class="badge-tbl" style="background:rgba(56,139,253,0.15);color:#58a6ff;border:1px solid rgba(56,139,253,0.3);">19. Tez O'rganish</span></td>
+                <td>
+                  <div class="t-kanji" style="font-size:14px;color:#fff;line-height:1.4;">実務で未経験のプログラミング言語やツールを任された場合、どうキャッチアップしますか？</div>
+                  <div class="t-kana" style="color:var(--text-muted);font-size:12px;">じつむ で みけいけん の ぷろぐらみんぐ げんご や つーる を まかされた ばあい どう きゃっちあっぷ</div>
+                </td>
+                <td>
+                  <strong style="color:#e6edf3;">Notanish texnologiyani o'zlashtirish:</strong>
+                  <div style="font-size:12px;color:var(--text-sub);margin-top:3px;">1) Doc, 2) Kichik prototip, 3) Jamoaga Hou-Ren-So qilish.</div>
+                </td>
+                <td>
+                  <div class="t-example-jp" style="font-size:12.5px;color:#fff;">「公式ドキュメントで設計思想を把握し、プロトタイプを自作して動作検証を行います。理解のズレを防ぐため先輩に報連相を行い、1〜2週間で実務レベルに立ち上げます。」</div>
+                  <div class="t-example-uz" style="font-size:11.5px;color:var(--text-muted);margin-top:2px;">Hujjat, prototip va maslahatlashuv orqali 1-2 haftada amaliyotga kirishish.</div>
+                </td>
+                <td style="text-align: center;">
+                  <button class="mini-speak-btn" onclick="speakText('実務で未経験の言語やツールを任された場合どうキャッチアップしますか？')">🔊</button>
+                </td>
+              </tr>
+
+              <!-- 20. Troubleshooting experience -->
+              <tr data-stage="tech" data-keywords="苦労 トラブル解決 Bionexstar API遅延 qiyinchilik nosozlik hal qilish">
+                <td><span class="badge-tbl" style="background:rgba(56,139,253,0.15);color:#58a6ff;border:1px solid rgba(56,139,253,0.3);">20. Qiyinchilik</span></td>
+                <td>
+                  <div class="t-kanji" style="font-size:14px;color:#fff;line-height:1.4;">これまで開発で最も苦労したことやトラブルと、その解決方法を教えてください。</div>
+                  <div class="t-kana" style="color:var(--text-muted);font-size:12px;">これまで かいはつ で もっとも くろう した こと や とらぶる と、その かいけつ ほうほう を おしえて</div>
+                </td>
+                <td>
+                  <strong style="color:#e6edf3;">Haqiqiy muammo yechish darsi:</strong>
+                  <div style="font-size:12px;color:var(--text-sub);margin-top:3px;">Bionexstar API kechikishini SQL indeksi va React useMemo bilan 40% tezlashtirish.</div>
+                </td>
+                <td>
+                  <div class="t-example-jp" style="font-size:12.5px;color:#fff;">「『Bionexstar』のAPI遅延問題です。ログ分析でDBインデックス不足と不要な再描画を特定し、複合インデックスとuseMemoで応答速度を約40％短縮いたしました。」</div>
+                  <div class="t-example-uz" style="font-size:11.5px;color:var(--text-muted);margin-top:2px;">Loglar tahlili, DB indekslari va frontend optimallashuvi orqali 40% tezlashtirish.</div>
+                </td>
+                <td style="text-align: center;">
+                  <button class="mini-speak-btn" onclick="speakText('これまで開発で最も苦労したことやトラブルとその解決方法を教えてください。')">🔊</button>
+                </td>
+              </tr>
+
+              <!-- 21. Production delay investigation -->
+              <tr data-stage="tech" data-keywords="本番遅延 ボトルネック 仮説検証 server kechikishi troubleshooting">
+                <td><span class="badge-tbl" style="background:rgba(56,139,253,0.15);color:#58a6ff;border:1px solid rgba(56,139,253,0.3);">21. Tizim Tekshiruvi</span></td>
+                <td>
+                  <div class="t-kanji" style="font-size:14px;color:#fff;line-height:1.4;">本番環境でサービスのレスポンスが突然遅くなった場合、どう原因を調査しますか？</div>
+                  <div class="t-kana" style="color:var(--text-muted);font-size:12px;">ほんばん かんきょう で さーびす の れすぽんす が とつぜん おそく なった ばあい どう げんいん を ちょうさ</div>
+                </td>
+                <td>
+                  <strong style="color:#e6edf3;">Nosozlik qidirish algoritmi:</strong>
+                  <div style="font-size:12px;color:var(--text-sub);margin-top:3px;">4 qatlamli analiz: Server CPU/RAM -> DB Slow Query -> Tashqi API/Kesh -> Monitoring.</div>
+                </td>
+                <td>
+                  <div class="t-example-jp" style="font-size:12.5px;color:#fff;">「仮説検証に基づき4層で調査します。1) サーバーログとリソース使用率、2) DBスロークエリとN+1問題、3) 外部API・キューの検証、4) 対策後の再発防止策です。」</div>
+                  <div class="t-example-uz" style="font-size:11.5px;color:var(--text-muted);margin-top:2px;">Server, baza, kesh va monitoring bo'yicha bosqichma-bosqich tekshiruv.</div>
+                </td>
+                <td style="text-align: center;">
+                  <button class="mini-speak-btn" onclick="speakText('本番環境でサービスのレスポンスが突然遅くなった場合どう原因を調査し解決しますか？')">🔊</button>
+                </td>
+              </tr>
+
+              <!-- 22. 5-year career plan -->
+              <tr data-stage="closing" data-keywords="5年後 キャリアプラン 5 yillik reja bridge engineer tech lead">
+                <td><span class="badge-tbl" style="background:rgba(248,81,73,0.15);color:#f85149;border:1px solid rgba(248,81,73,0.3);">22. 5 Yillik Reja</span></td>
+                <td>
+                  <div class="t-kanji" style="font-size:14px;color:#fff;line-height:1.4;">5年後、日本でどのようなエンジニアになっていたいですか？</div>
+                  <div class="t-kana" style="color:var(--text-muted);font-size:12px;">ごねんご、にほん で どの ような えんじにあ に なって いたい ですか</div>
+                </td>
+                <td>
+                  <strong style="color:#e6edf3;">Kelajakdagi maqsad:</strong>
+                  <div style="font-size:12px;color:var(--text-sub);margin-top:3px;">3 yilda Tech Lead bo'lish, 5 yilda Bridge Engineer bo'lib xalqaro jamoalarni boshqarish.</div>
+                </td>
+                <td>
+                  <div class="t-example-jp" style="font-size:12.5px;color:#fff;">「3年で現場のテックリードとして信頼を確立し、5年後には多国籍チームを束ね、日本と世界を技術で繋ぐブリッジエンジニアとして貴社のグローバル展開を牽引したいです。」</div>
+                  <div class="t-example-uz" style="font-size:11.5px;color:var(--text-muted);margin-top:2px;">Texnik yetakchi bo'lib ishonch qozonish va xalqaro loyihalarni boshqarish.</div>
+                </td>
+                <td style="text-align: center;">
+                  <button class="mini-speak-btn" onclick="speakText('5年後日本でどのようなエンジニアになっていたいですか？')">🔊</button>
+                </td>
+              </tr>
+
+              <!-- 23. Gyaku-shitsumon (Reverse questions) -->
+              <tr data-stage="closing" data-keywords="逆質問 何か質問はありますか savollaringiz bormi gyaku shitsumon">
+                <td><span class="badge-tbl" style="background:rgba(248,81,73,0.15);color:#f85149;border:1px solid rgba(248,81,73,0.3);">23. Teskari Savol</span></td>
+                <td>
+                  <div class="t-kanji" style="font-size:14px;color:#fff;line-height:1.4;">最後に、面接官に何か質問（逆質問）はありますか？</div>
+                  <div class="t-kana" style="color:var(--text-muted);font-size:12px;">さいご に、めんせつかん に なにか しつもん は あります か</div>
+                </td>
+                <td>
+                  <strong style="color:#e6edf3;">HR'ga beriladigan kuchli savol:</strong>
+                  <div style="font-size:12px;color:var(--text-sub);margin-top:3px;">Qabul qilinsa ish boshlanguncha nimalarni o'rganish kerakligini so'rab ishtiyoq ko'rsatish.</div>
+                </td>
+                <td>
+                  <div class="t-example-jp" style="font-size:12.5px;color:#fff;">「もし内定をいただけた場合、入社日までの期間で特に重点的に勉強しておくべき技術スタックや知識があれば、ぜひアドバイスをいただけますでしょうか？」</div>
+                  <div class="t-example-uz" style="font-size:11.5px;color:var(--text-muted);margin-top:2px;">Ish boshlanguncha qaysi texnologiyalarni o'rganib kelishni so'rash.</div>
+                </td>
+                <td style="text-align: center;">
+                  <button class="mini-speak-btn" onclick="speakText('最後に面接官に何か質問はありますか？')">🔊</button>
+                </td>
+              </tr>
+
+              <!-- 24. Final closing gratitude -->
+              <tr data-stage="closing" data-keywords="面接終了 最後の挨拶 貴重なお時間 yakunlash minnatdorchilik">
+                <td><span class="badge-tbl" style="background:rgba(248,81,73,0.15);color:#f85149;border:1px solid rgba(248,81,73,0.3);">24. Yakuniy Ta'zim</span></td>
+                <td>
+                  <div class="t-kanji" style="font-size:14px;color:#fff;line-height:1.4;">本日はお忙しい中、貴重なお時間をいただき誠にありがとうございました。失礼いたします。</div>
+                  <div class="t-kana" style="color:var(--text-muted);font-size:12px;">ほんじつ は おいそがしい なか、きちょう な おじかん を いただき まことに ありがとう ございました</div>
+                </td>
+                <td>
+                  <strong style="color:#e6edf3;">Eng so'nggi chiqish so'zi:</strong>
+                  <div style="font-size:12px;color:var(--text-sub);margin-top:3px;">Samimiy tabassum bilan 30-45 gradus ta'zim qilish va aloqani intervyuer uzishini kutish.</div>
+                </td>
+                <td>
+                  <div class="t-example-jp" style="font-size:12.5px;color:#fff;">「本日はお忙しい中、貴重なお時間をいただき誠にありがとうございました。失礼いたします。」</div>
+                  <div class="t-example-uz" style="font-size:11.5px;color:var(--text-muted);margin-top:2px;">Qimmatli vaqtingizni ajratganingiz uchun rahmat. Ruxsat bersangiz.</div>
+                </td>
+                <td style="text-align: center;">
+                  <button class="mini-speak-btn" onclick="speakText('本日はお忙しい中、貴重なお時間をいただき誠にありがとうございました。失礼いたします。')">🔊</button>
+                </td>
+              </tr>
+
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
 
 
     <!-- ========================================================
@@ -10103,6 +10630,36 @@ Ha, albatta 3 ta savolim bor edi:
           card.style.display = 'flex';
         } else {
           card.style.display = 'none';
+        }
+      });
+    }
+
+    
+    function filterQaStage(stage, btn) {
+      document.querySelectorAll('#qaTableFilters .tbl-btn').forEach(b => b.classList.remove('active'));
+      if (btn) btn.classList.add('active');
+
+      const rows = document.querySelectorAll('#qaTableBody tr');
+      rows.forEach(row => {
+        const rowStage = row.getAttribute('data-stage');
+        if (stage === 'all' || rowStage === stage) {
+          row.style.display = '';
+        } else {
+          row.style.display = 'none';
+        }
+      });
+    }
+
+    function searchQaTable(query) {
+      const q = query.toLowerCase().trim();
+      const rows = document.querySelectorAll('#qaTableBody tr');
+      rows.forEach(row => {
+        const text = row.innerText.toLowerCase();
+        const kw = row.getAttribute('data-keywords') || '';
+        if (text.includes(q) || kw.includes(q)) {
+          row.style.display = '';
+        } else {
+          row.style.display = 'none';
         }
       });
     }
