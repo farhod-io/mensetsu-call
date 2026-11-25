@@ -2267,6 +2267,54 @@
         <span class="count">Intervyudan 1 soat oldin tekshirish lozim bo'lgan muhim amallar</span>
       </div>
 
+      
+      <!-- Oltin Kirish va Yakunlash Ibora Kartalari -->
+      <div class="web-phrases-box" style="display:grid; grid-template-columns:repeat(auto-fit, minmax(320px, 1fr)); gap:16px; margin-bottom:24px;">
+        
+        <!-- Opening Phrase -->
+        <div style="background:linear-gradient(135deg, rgba(88,166,255,0.12), rgba(56,139,253,0.04)); border:1px solid rgba(88,166,255,0.35); border-radius:var(--card-radius); padding:20px; position:relative; box-shadow:0 4px 16px rgba(0,0,0,0.25);">
+          <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:12px;">
+            <span style="background:rgba(88,166,255,0.2); color:#58a6ff; font-size:12px; font-weight:700; padding:4px 10px; border-radius:6px; border:1px solid rgba(88,166,255,0.3);">🟢 SUHBAT BOSHLANISHIDA (KIRISH)</span>
+            <span style="font-size:12px; color:var(--text-muted);">Web 面接 開始時</span>
+          </div>
+          <div style="font-size:17px; font-weight:800; color:#fff; font-family:var(--font-jp); line-height:1.5; margin-bottom:8px;">
+            「画面や音声は問題なく届いておりますでしょうか。本日はどうぞよろしくお願いいたします。」
+          </div>
+          <div style="font-size:13px; color:#58a6ff; margin-bottom:8px; font-style:italic;">
+            Gamen ya onsei wa mondai naku todoite orimasu deshō ka. Honjitsu wa dōzo yoroshiku onegai itashimasu.
+          </div>
+          <div style="font-size:13px; color:var(--text-sub); line-height:1.5; margin-bottom:14px; background:var(--surface); padding:10px 12px; border-radius:8px; border-left:3px solid var(--primary);">
+            🇺🇿 <strong>O'zbekcha ma'nosi:</strong> "Ekranim va ovozim yaxshi yetib boryaptimi? Bugun siz bilan suhbatlashishdan juda mamnunman, marhamat."
+          </div>
+          <div style="display:flex; gap:10px;">
+            <button class="action-btn" onclick="navigator.clipboard.writeText('画面や音声は問題なく届いておりますでしょうか。本日はどうぞよろしくお願いいたします。'); showToast('✅ Kirish iborasi nusxalandi!')">📋 Nusxa olish</button>
+            <button class="action-btn speak" onclick="speakText('画面や音声は問題なく届いておりますでしょうか。本日はどうぞよろしくお願いいたします。')">🔊 Tinglash</button>
+          </div>
+        </div>
+
+        <!-- Closing Phrase -->
+        <div style="background:linear-gradient(135deg, rgba(63,185,80,0.12), rgba(46,160,67,0.04)); border:1px solid rgba(63,185,80,0.35); border-radius:var(--card-radius); padding:20px; position:relative; box-shadow:0 4px 16px rgba(0,0,0,0.25);">
+          <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:12px;">
+            <span style="background:rgba(63,185,80,0.2); color:#3fb950; font-size:12px; font-weight:700; padding:4px 10px; border-radius:6px; border:1px solid rgba(63,185,80,0.3);">🔴 SUHBAT YAKUNIDA (CHIQISH)</span>
+            <span style="font-size:12px; color:var(--text-muted);">Web 面接 終了時</span>
+          </div>
+          <div style="font-size:17px; font-weight:800; color:#fff; font-family:var(--font-jp); line-height:1.5; margin-bottom:8px;">
+            「本日はお忙しい中、貴重なお時間をいただき誠にありがとうございました。失礼いたします。」
+          </div>
+          <div style="font-size:13px; color:#3fb950; margin-bottom:8px; font-style:italic;">
+            Honjitsu wa oisogashii naka, kichō na ojikan o itadaki makoto ni arigatō gozaimashita. Shitsurei itashimasu.
+          </div>
+          <div style="font-size:13px; color:var(--text-sub); line-height:1.5; margin-bottom:14px; background:var(--surface); padding:10px 12px; border-radius:8px; border-left:3px solid var(--green);">
+            🇺🇿 <strong>O'zbekcha ma'nosi:</strong> "Bugun tig'iz vaqtingiz bo'lishiga qaramay, menga qimmatli vaqtingizni ajratganingiz uchun chin dildan minnatdorman. Ruxsat bersangiz."
+          </div>
+          <div style="display:flex; gap:10px;">
+            <button class="action-btn" onclick="navigator.clipboard.writeText('本日はお忙しい中、貴重なお時間をいただき誠にありがとうございました。失礼いたします。'); showToast('✅ Yakuniy ibora nusxalandi!')">📋 Nusxa olish</button>
+            <button class="action-btn speak" onclick="speakText('本日はお忙しい中、貴重なお時間をいただき誠にありがとうございました。失礼いたします。')">🔊 Tinglash</button>
+          </div>
+        </div>
+
+      </div>
+
       <div class="checklist-grid">
         <div class="check-item" onclick="toggleCheckItem(this)">
           <div class="check-box">✓</div>
@@ -7785,6 +7833,21 @@ Shu paytgacha tobi qochib o'qish yoki loyihani qoldirgan emasman, eng qiyin va m
         </p>
 
         <div class="emergency-grid">
+          <div class="emergency-card" style="border-left: 3px solid #58a6ff;">
+            <div class="em-scenario">Suhbat boshlanishida (Ekran va ovozni tekshirish)</div>
+            <div class="em-jp">画面や音声は問題なく届いておりますでしょうか。本日はどうぞよろしくお願いいたします。</div>
+            <div class="em-romaji">Gamen ya onsei wa mondai naku todoite orimasu deshō ka. Honjitsu wa dōzo yoroshiku onegai itashimasu.</div>
+            <div class="em-uz">Ekranim va ovozim yaxshi yetib boryaptimi? Bugun siz bilan suhbatlashishdan mamnunman, marhamat.</div>
+            <button class="btn-icon" style="margin-top:8px;" onclick="speakJp('画面や音声は問題なく届いておりますでしょうか。本日はどうぞよろしくお願いいたします。')">🔊 Tinglash</button>
+          </div>
+
+          <div class="emergency-card" style="border-left: 3px solid #3fb950;">
+            <div class="em-scenario">Suhbat yakunida (Rasmiy minnatdorchilik va ta'zim)</div>
+            <div class="em-jp">本日はお忙しい中、貴重なお時間をいただき誠にありがとうございました。失礼いたします。</div>
+            <div class="em-romaji">Honjitsu wa oisogashii naka, kichō na ojikan o itadaki makoto ni arigatō gozaimashita. Shitsurei itashimasu.</div>
+            <div class="em-uz">Bugun tig'iz vaqtingiz bo'lishiga qaramay, qimmatli vaqtingizni ajratganingiz uchun chin dildan minnatdorman. Ruxsat bersangiz.</div>
+            <button class="btn-icon" style="margin-top:8px;" onclick="speakJp('本日はお忙しい中、貴重なお時間をいただき誠にありがとうございました。失礼いたします。')">🔊 Tinglash</button>
+          </div>
           <div class="emergency-card">
             <div class="em-scenario">Savolni eshitmay yoki tushunmay qolganda</div>
             <div class="em-jp">申し訳ございません。もう一度おっしゃっていただけますでしょうか？</div>
